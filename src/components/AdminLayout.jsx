@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { supabase } from '../lib/supabaseClient'
 import { useNavigate, NavLink } from 'react-router-dom'
 
-import { FaHome, FaNewspaper, FaHandHoldingHeart, FaSignOutAlt } from 'react-icons/fa'
+import { FaHome, FaNewspaper, FaSignOutAlt , FaInfoCircle} from 'react-icons/fa'
 
 import './adminLayout.css'
 
@@ -14,12 +14,26 @@ function AdminLayout({ children }) {
     carregarUsuario()
   }, [])
 
-  async function carregarUsuario() {
-    const { data } = await supabase.auth.getUser()
+ async function carregarUsuario() {
+  const { data: userData } = await supabase.auth.getUser()
 
-    if (data.user) {
-      setNome(data.user.user_metadata?.nome || data.user.email)
+    if (userData.user) {
+      const userId = userData.user.id
+
+      const { data: usuario, error } = await supabase
+        .from('usuarios')
+        .select('nome')
+        .eq('id', userId)
+        .single()
+
+      if (error) {
+        console.error(error)
+        setNome(userData.user.email)
+      } else {
+        setNome(usuario.nome)
+      }
     }
+    
   }
 
   async function sair() {
@@ -49,7 +63,7 @@ function AdminLayout({ children }) {
 
         <NavLink to="/admin" end className="link"> <FaHome /> Home </NavLink>
         <NavLink to="/admin/posts" className="link"><FaNewspaper /> Posts </NavLink>
-        <NavLink to="/admin/informacoes" className="link"><FaHandHoldingHeart /> Informações </NavLink>
+        <NavLink to="/admin/informacoes" className="link"><FaInfoCircle /> Informações Gerais</NavLink>
         
       </nav>
 

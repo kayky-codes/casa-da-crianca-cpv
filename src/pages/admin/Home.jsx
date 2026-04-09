@@ -1,9 +1,9 @@
-import AdminLayout from '../../services/AdminLayout'
+import AdminLayout from '../../components/AdminLayout'
 
 function Dashboard() {
   return (
     <AdminLayout>
-        <h1>Dashboard</h1>
+      <h1>Dashboard</h1>
     </AdminLayout>
   )
 }

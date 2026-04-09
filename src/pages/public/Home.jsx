@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../../lib/supabaseClient'
-import Loading from '../../services/Loading'
+import Loading from '../../components/Loading'
 
 function Home() {
   const [posts, setPosts] = useState([])

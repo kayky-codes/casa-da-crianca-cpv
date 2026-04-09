@@ -1,4 +1,4 @@
-import AdminLayout from '../../services/AdminLayout'
+import AdminLayout from '../../components/AdminLayout'
 
 function AdminPost() {
   return (

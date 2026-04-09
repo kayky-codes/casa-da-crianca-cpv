@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Navigate } from 'react-router-dom'
 import { supabase } from '../lib/supabaseClient'
-import Loading from './Loading'
+import Loading from '../components/Loading'
 
 export default function PrivateRoute({ children }) {
   const [loading, setLoading] = useState(true)
