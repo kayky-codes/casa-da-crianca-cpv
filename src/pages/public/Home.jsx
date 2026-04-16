@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../../lib/supabaseClient'
 import Loading from '../../components/Loading'
+import './public.css';
 
 function Home() {
   const [posts, setPosts] = useState([])
@@ -41,24 +42,38 @@ function Home() {
 
   return (
     <div>
-      <h1>Posts</h1>
+        <div className="h1">
+          <div className="text">
 
-      {posts.map((post) => (
-        <div key={post.id}>
-          <h2>{post.titulo}</h2>
-          <p>{post.conteudo}</p>
-
-          {imagens
-            .filter(img => img.post_id === post.id)
-            .map(img => (
-              <img 
-                key={img.id}
-                src={img.imagem_url}
-                width="200"
-              />
-            ))}
+          </div>
+          <img src="" alt="" />
         </div>
-      ))}
+
+        <div className="h2">
+          <div className="text">
+
+          </div>
+          <img src="" alt="" />
+        </div>
+        
+        <div className="mural">
+          <h1>Mural</h1>
+          <h2>Cada sorriso aqui carrega uma historia de cuidado, esperança e transformação</h2>
+          <div className="img">
+
+          </div>
+        </div>
+
+        <div className="h3">
+          <div className="doacao">
+
+          </div>
+
+          <div className="historia">
+
+          </div>
+        </div>
+
     </div>
   )
 }
