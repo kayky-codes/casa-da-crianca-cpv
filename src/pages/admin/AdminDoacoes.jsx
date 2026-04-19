@@ -116,6 +116,8 @@ function Doacoes() {
 
     return (
         <AdminLayout>
+        <div class name="admin-pages">
+        <div className="wrapper">
             <div className="container">
                 <h2>Dados Diarios</h2>
                 <form className="container-form" onSubmit={salvarDados}>
@@ -170,6 +172,8 @@ function Doacoes() {
                     <p>Nenhuma doação registrada</p>
                 )}
             </div>
+        </div>
+        </div>
         </AdminLayout>
     )
 }
