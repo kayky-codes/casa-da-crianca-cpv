@@ -1,7 +1,7 @@
-import { useEffect, useState} from 'react';
-import AdminLayout from '../../components/AdminLayout';
-import './admin.css';
-import { supabase } from '../../lib/supabaseClient';
+import { useEffect, useState} from 'react'
+import AdminLayout from '../../components/AdminLayout'
+import './admin.css'
+import { supabase } from '../../lib/supabaseClient'
 
 
 function Doacoes() {

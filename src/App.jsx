@@ -7,6 +7,7 @@ import AdminInformacoes from './pages/admin/AdminInformacoes'
 import AdminPost from './pages/admin/AdminPost'
 import AdminUsuarios from './pages/admin/AdminUsuarios'
 import Doacoes from './pages/admin/AdminDoacoes'
+import PostForm from './pages/admin/PostForm.jsx'
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
         <Route path="/admin/posts" element={<PrivateRoute> <AdminPost /> </PrivateRoute>} />
         <Route path="/admin/informacoes" element={<PrivateRoute> <AdminInformacoes /> </PrivateRoute>} />
         <Route path="/admin/usuarios" element={<PrivateRoute> <AdminUsuarios /> </PrivateRoute>} />
+        <Route path="/posts/novo" element={<PostForm />} />
+        <Route path="/posts/editar/:id" element={<PostForm />} />
 
 
       </Routes>
