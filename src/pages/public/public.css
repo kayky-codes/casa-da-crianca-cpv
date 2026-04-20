@@ -36,9 +36,10 @@ header div h2.link a{
 footer{
     background-color: #0095da;
     width: 100%;
-    height: 5vw;
+    height: 7vw;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 footer .contato{
@@ -85,19 +86,19 @@ footer .horario .dias .uteis{
 }
 
 footer .rsociais{
-    padding-top: 0.5vw;
+    padding-top: 2.5vw;
 }
 
 footer .rsociais .face{
-    padding: 0.5vw 0vw 1vw 0.3vw;
+    padding: 0.5vw 0 0.3vw;
     width: 1.5vw;
     height: 1.5vw;
 }
 
 footer .rsociais .insta{
-    padding: 0.5vw 0vw 1vw 1vw;
-    width: 1.5vw;
-    height: 1.5vw;
+    padding: 0.5vw 0 0 1vw;
+    width: 1.7vw;
+    height: 1.7vw;
 }
 
 footer h2, footer h3{
@@ -171,19 +172,6 @@ footer h3{
     height: 29vw;
 }
 
-.azul{
-    color: #0095da;
-}
-
-.verde{
-    color: #74c137;
-}
-
-.rosa{
-    color: #fc949a;
-    font-weight: bolder;
-}
-
 /* Parte 1 */
 /* Parte 2 */
 .conteiner_home .mural{
@@ -199,7 +187,7 @@ footer h3{
 
 .conteiner_home .mural h1{
     height: 2vw;
-    margin: 2vw 0 2vw 0;
+    margin: -0.3vw 0 2vw 0;
     font-size: 4vw;
 }
 
@@ -208,6 +196,7 @@ footer h3{
     margin: 1vw 0 0 0;
     padding: 0;
     text-align: center;
+    font-size: 2.7vw;
 }
 
 .conteiner_home .mural .img{
@@ -216,7 +205,7 @@ footer h3{
 }
 
 .conteiner_home .mural .img img{
-    margin: 3vw 1.5vw 3vw 1.5vw;
+    margin: 2vw 1.5vw 3vw 1.5vw;
     padding: 0;
     width: 20vw;
     height: 30vw;
@@ -225,3 +214,52 @@ footer h3{
 }
 
 /* Parte 2 */
+/* Parte 3 */
+.conteiner_home .p3{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 20vw;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.conteiner_home .p3 .doacao{
+    width: 30%;
+    height: 20vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #74c137;
+}
+
+.conteiner_home .p3 .historia{
+    width: 30%;
+    height: 20vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #74c137;
+}
+
+/* Parte 3 */
+
+
+
+/* Global */
+
+.azul{
+    color: #0095da;
+}
+
+.verde{
+    color: #74c137;
+}
+
+.rosa{
+    color: #fc949a;
+    font-weight: bolder;
+}
+
+.branco{
+    color: #ffffff;
+}

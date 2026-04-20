@@ -29,8 +29,8 @@ function Home(){
                     </div>
                     
                     <div className="mural">
-                        <h1>Mural</h1>
-                        <h2>Cada sorriso aqui carrega uma história de cuidado, esperança e transformação.</h2>
+                        <h1 className="branco">Mural</h1>
+                        <h2 className="branco">Cada sorriso aqui carrega uma história de cuidado, esperança e transformação.</h2>
                         <div className="img">
                             <img src={ong1} alt="" />
                             <img src={ong2} alt="" />
@@ -41,11 +41,20 @@ function Home(){
 
                     <div className="p3">
                         <div className="doacao">
-
+                            <h1>Como você pode ajudar?</h1>
+                            <ul>
+                                <li>Faça uma doação</li>
+                                <li>Seja voluntário</li>
+                                <li>Divulgue nossa causa</li>
+                                <li>Apoie nossos projetos</li>                        
+                            </ul>
+                            <a href="">Saiba Mais!</a>
                         </div>
 
                         <div className="historia">
-
+                            <h1>Nossa História!</h1>
+                            <h3>A Casa da Criança de Capivari nasceu com o propósito de oferecer apoio e acolhimento a crianças e adolescentes em situação de vulnerabilidade social.</h3>
+                            <a href="">Saiba Mais!</a>
                         </div>
                     </div>
 
