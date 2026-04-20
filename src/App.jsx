@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import PrivateRoute from './services/privateRoute.jsx'
 import Login from './pages/public/Login'
 import Home from './pages/public/Home'
+import Qsomos from './pages/public/Qsomos'
 import Dashboard from './pages/admin/Home'
 import AdminInformacoes from './pages/admin/AdminInformacoes'
 import AdminPost from './pages/admin/AdminPost'
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         {/* Publico */}
         <Route path="/" element={<Home />} />
+        <Route path="/Qsomos" element={<Qsomos />} />
         <Route path="/logar" element={<Login />} />
 
         {/* Administrador */}
