@@ -14,26 +14,8 @@ function AdminLayout({ children }) {
     carregarUsuario()
   }, [])
 
- async function carregarUsuario() {
-  const { data: userData } = await supabase.auth.getUser()
-
-    if (userData.user) {
-      const userId = userData.user.id
-
-      const { data: usuario, error } = await supabase
-        .from('usuarios')
-        .select('nome')
-        .eq('id', userId)
-        .single()
-
-      if (error) {
-        console.error(error)
-        setNome(userData.user.email)
-      } else {
-        setNome(usuario.nome)
-      }
-    }
-    
+  async function carregarUsuario() {
+    const { data: userData } = await supabase.auth.getUser()
   }
 
   async function sair() {
@@ -48,9 +30,8 @@ function AdminLayout({ children }) {
       <header className="header">
 
         <div className="header-left">
-          <h2
-          >Casa da Criança</h2>
-          <span className="boas-vindas">Olá, {nome}</span>
+          <h2>Casa da Criança</h2>
+          <span className="boas-vindas">Painel Administrador</span>
         </div>
 
         <div className="header-right">

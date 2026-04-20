@@ -55,3 +55,14 @@
 .btn-salvar:hover {
   background: #0056b3;
 }
+
+.wrapper {
+  display: flex;
+  gap: 20px; /* espaço entre as divs */
+  align-items: flex-start; /* alinha no topo */
+}
+
+.container {
+  flex: 1; /* faz as duas ocuparem o mesmo espaço */
+}
+
