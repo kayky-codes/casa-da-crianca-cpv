@@ -11,6 +11,7 @@ import Doacoes from './pages/admin/AdminDoacoes'
 function App() {
   return (
     <BrowserRouter>
+
       <Routes>
         {/* Publico */}
         <Route path="/" element={<Home />} />
@@ -24,8 +25,9 @@ function App() {
 
 
       </Routes>
+
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;
