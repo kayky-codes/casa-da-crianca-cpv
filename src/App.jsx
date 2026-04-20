@@ -25,8 +25,8 @@ function App() {
         <Route path="/admin/posts" element={<PrivateRoute> <AdminPost /> </PrivateRoute>} />
         <Route path="/admin/informacoes" element={<PrivateRoute> <AdminInformacoes /> </PrivateRoute>} />
         <Route path="/admin/usuarios" element={<PrivateRoute> <AdminUsuarios /> </PrivateRoute>} />
-        <Route path="/posts/novo" element={<PostForm />} />
-        <Route path="/posts/editar/:id" element={<PostForm />} />
+        <Route path="/admin/posts/novo" element={<PostForm />} />
+        <Route path="/admin/posts/editar/:id" element={<PostForm />} />
 
 
       </Routes>
