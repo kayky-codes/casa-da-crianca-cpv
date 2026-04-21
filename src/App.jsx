@@ -3,12 +3,12 @@ import PrivateRoute from './services/privateRoute.jsx'
 import Login from './pages/public/Login'
 import Home from './pages/public/Home'
 import Qsomos from './pages/public/Qsomos'
-import Dashboard from './pages/admin/Home'
 import AdminInformacoes from './pages/admin/AdminInformacoes'
 import AdminPost from './pages/admin/AdminPost'
 import AdminUsuarios from './pages/admin/AdminUsuarios'
 import Doacoes from './pages/admin/AdminDoacoes'
 import PostForm from './pages/admin/PostForm.jsx'
+import PrestarContas from './pages/admin/AdminContas.jsx'
 
 function App() {
   return (
@@ -27,6 +27,7 @@ function App() {
         <Route path="/admin/usuarios" element={<PrivateRoute> <AdminUsuarios /> </PrivateRoute>} />
         <Route path="/admin/posts/novo" element={<PostForm />} />
         <Route path="/admin/posts/editar/:id" element={<PostForm />} />
+        <Route path="/admin/contas" element={<PrestarContas />} />
 
 
       </Routes>
