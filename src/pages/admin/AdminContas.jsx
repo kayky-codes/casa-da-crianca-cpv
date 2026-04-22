@@ -13,28 +13,28 @@ function PrestarContas() {
     carregarContas()
   }, [])
 
-    function limparNomeArquivo(nome) {
-        return nome
-            .normalize("NFD")                 // remove acentos
-            .replace(/[\u0300-\u036f]/g, '')  // remove diacríticos
-            .replace(/\s+/g, '_')             // espaço → _
-            .replace(/[^a-zA-Z0-9._-]/g, '')  // remove caracteres inválidos
+  function limparNomeArquivo(nome) {
+    return nome
+      .normalize("NFD")                 // remove acentos
+      .replace(/[\u0300-\u036f]/g, '')  // remove diacríticos
+      .replace(/\s+/g, '_')             // espaço → _
+      .replace(/[^a-zA-Z0-9._-]/g, '')  // remove caracteres inválidos
+  }
+
+  async function carregarContas() {
+    const { data, error } = await supabase
+      .from('prestacoes_conta')
+      .select('*')
+      .order('criado_em', { ascending: false })
+
+    if (error) {
+      console.error('Erro ao carregar contas:', error)
+    } else {
+      setContas(data)
     }
+  }
 
-    async function carregarContas() {
-        const { data, error } = await supabase
-            .from('prestacoes_conta') 
-            .select('*')
-            .order('criado_em', { ascending: false })
-
-        if (error) {
-            console.error('Erro ao carregar contas:', error)
-        } else {
-            setContas(data)
-        }
-    }
-
-async function salvar(e) {
+  async function salvar(e) {
     e.preventDefault()
 
     if (!file || !titulo) {
@@ -54,7 +54,7 @@ async function salvar(e) {
 
     // Upload no Storage
     const { error: uploadError } = await supabase.storage
-      .from('Prestacao_contas') 
+      .from('Prestacao_contas')
       .upload(fileName, file)
 
     if (uploadError) {
@@ -65,7 +65,7 @@ async function salvar(e) {
 
     // Pegar URL pública
     const { data: urlData } = supabase.storage
-      .from('Prestacao_contas') 
+      .from('Prestacao_contas')
       .getPublicUrl(fileName)
 
     const url = urlData.publicUrl
@@ -92,7 +92,7 @@ async function salvar(e) {
     setLoading(false)
 
     carregarContas()
-}
+  }
 
   async function excluirConta(id, arquivoUrl) {
     if (!window.confirm('Tem certeza que deseja excluir esta conta?')) {
@@ -114,7 +114,7 @@ async function salvar(e) {
     const { error: storageError } = await supabase.storage
       .from('Prestacao_contas')
       .remove([filePath])
-    
+
     if (storageError) {
       alert('Erro ao excluir do storage: ' + storageError.message)
       return
