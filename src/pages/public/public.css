@@ -535,9 +535,6 @@ footer h3{
     width: 200px;
 }
 
-.verde { background: #66bb6a; }
-.rosa { background: #ef9a9a; }
-.azul { background: #42a5f5; }
 
 /* ENTREGA */
 .entrega {
@@ -645,4 +642,4 @@ footer h3{
 .btn_branco{
     background-color: white;
     color: #0095da;
-}
+} 
