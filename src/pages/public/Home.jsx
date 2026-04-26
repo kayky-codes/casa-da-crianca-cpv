@@ -12,8 +12,8 @@ function Home(){
         return(
             <>
                 <Header />
-                <main className="conteiner_home">
-                    <div className="p1">
+                <main className="conteiner_public">
+                    <div className="row">
                         <div className="div_texto">
                             <h1><b className="azul">CASA</b><b className="verde">DA</b></h1>
                             <h1 className="t1 rosa">CRIANÇA</h1>
@@ -28,10 +28,10 @@ function Home(){
                         <img src={home_2} alt="" />
                     </div>
                     
-                    <div className="mural">
+                    <div className="mural column">
                         <h1 className="branco">Mural</h1>
                         <h2 className="branco">Cada sorriso aqui carrega uma história de cuidado, esperança e transformação.</h2>
-                        <div className="img">
+                        <div className="row">
                             <img src={ong1} alt="" />
                             <img src={ong2} alt="" />
                             <img src={ong3} alt="" />
@@ -39,10 +39,10 @@ function Home(){
                         </div>
                     </div>
 
-                    <div className="p3">
-                        <div className="doacao">
-                            <h1>Como você pode ajudar?</h1>
-                            <ul>
+                    <div className="p3 row">
+                        <div className="info column">
+                            <h1 className="rosa">Como você pode ajudar?</h1>
+                            <ul className="mar0">
                                 <li>Faça uma doação</li>
                                 <li>Seja voluntário</li>
                                 <li>Divulgue nossa causa</li>
@@ -51,9 +51,9 @@ function Home(){
                             <a href="">Saiba Mais!</a>
                         </div>
 
-                        <div className="historia">
-                            <h1>Nossa História!</h1>
-                            <h3>A Casa da Criança de Capivari nasceu com o propósito de oferecer apoio e acolhimento a crianças e adolescentes em situação de vulnerabilidade social.</h3>
+                        <div className="info column">
+                            <h1 className="verde">Nossa História!</h1>
+                            <h3 className="mar0">A Casa da Criança de Capivari nasceu com o propósito de oferecer apoio e acolhimento a crianças e adolescentes em situação de vulnerabilidade social.</h3>
                             <a href="">Saiba Mais!</a>
                         </div>
                     </div>

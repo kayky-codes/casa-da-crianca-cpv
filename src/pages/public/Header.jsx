@@ -6,16 +6,16 @@ function Header() {
         <header>
             <img className="logo" src={logo} alt="Casa da Criança" />
 
-            <div className="navbar">
+            <div className="navbar row">
                 <h2 className="link"><Link to="/">Home</Link></h2>
-                <h2 className="link"><Link to="/Qsomos">Quem Somos</Link></h2>
-                <h2 className="link"><Link>Transparência</Link></h2>
-                <h2 className="link"><Link>Doações</Link></h2>
-                <h2 className="link"><Link>Atividade da Casa</Link></h2>
-                <h2 className="link"><Link>Voluntáriado</Link></h2>
-                <h2 className="link"><Link>Instalações</Link></h2>
-                <h2 className="link"><Link>Ações</Link></h2>
-                <h2 className="link"><Link>Mais</Link></h2>
+                <h2 className="link"><Link to="/qsomos">Quem Somos</Link></h2>
+                <h2 className="link"><Link to="/transparencia">Transparência</Link></h2>
+                <h2 className="link"><Link to="/doacoes">Doações</Link></h2>
+                <h2 className="link"><Link to="/atividade">Atividade da Casa</Link></h2>
+                <h2 className="link"><Link to="/voluntario">Voluntáriado</Link></h2>
+                <h2 className="link"><Link to="/instalacoes">Instalações</Link></h2>
+                <h2 className="link"><Link to="/acoes">Ações</Link></h2>
+                <h2 className="link"><Link to="/">Mais</Link></h2>
             </div>
         </header>
     );

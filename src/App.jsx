@@ -3,6 +3,13 @@ import PrivateRoute from './services/privateRoute.jsx'
 import Login from './pages/public/Login'
 import Home from './pages/public/Home'
 import Qsomos from './pages/public/Qsomos'
+import Transparencia from './pages/public/Transparencia.jsx'
+import Doacoes from './pages/public/Doacoes.jsx'
+import Atividade from './pages/public/Atividades.jsx'
+import Voluntario from './pages/public/Voluntario.jsx'
+import Instalacoes from './pages/public/Instalacoes.jsx'
+import Acoes from './pages/public/Acoes.jsx'
+import Contato from './pages/public/Contato.jsx'
 import AdminInformacoes from './pages/admin/AdminInformacoes'
 import AdminPost from './pages/admin/AdminPost'
 import AdminUsuarios from './pages/admin/AdminUsuarios'
@@ -18,7 +25,14 @@ function App() {
       <Routes>
         {/* Publico */}
         <Route path="/" element={<Home />} />
-        <Route path="/Qsomos" element={<Qsomos />} />
+        <Route path="/qsomos" element={<Qsomos />} />
+        <Route path="/transparencia" element={<Transparencia />} />
+        <Route path="/doacoes" element={<Doacoes />} />
+        <Route path="/atividade" element={<Atividade />} />
+        <Route path="/voluntario" element={<Voluntario />} />
+        <Route path="/instalacoes" element={<Instalacoes />} />
+        <Route path="/contato" element={<Contato />} />
+        <Route path="/acoes" element={<Acoes />} />
         <Route path="/logar" element={<Login />} />
 
         {/* Administrador */}

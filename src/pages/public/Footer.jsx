@@ -1,7 +1,7 @@
 function Footer() {
     return(
-        <footer>
-            <div className="contato">
+        <footer className="row">
+            <div className="contato column">
                 <h2>Contato</h2>
                 <div className="tipos">
                     <div className="telefone">
@@ -27,10 +27,10 @@ function Footer() {
                 <a href="https://www.instagram.com/casadacriancacapivari/" target="_blank" rel="noopener noreferrer"><img className="insta" src="src/assets/instagram.png" alt="Intagram" /></a>
             </div>
 
-            <div className="horario">
+            <div className="horario column">
                 <h2>Horario de atendimento</h2>
-                <div className="dias">
-                    <div className="uteis">
+                <div className="row">
+                    <div className="d_uteis">
                         <h3>Segunda à Sexta</h3>
                         <h3>8h às 17h</h3>
                     </div>
