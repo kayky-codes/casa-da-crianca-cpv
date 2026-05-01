@@ -25,7 +25,7 @@ function Qsomos() {
                 </div>
 
                 {/* DIV 2 */}
-                <div className="p2_blocos branco">
+                <div className="p2_blocos row branco">
                     <div className="bloco f_verde">
                         <h2>Nossa Missão</h2>
                         <p>Promover o desenvolvimento integral de crianças e adolescentes, fortalecendo valores, autoestima e oportunidades.</p>

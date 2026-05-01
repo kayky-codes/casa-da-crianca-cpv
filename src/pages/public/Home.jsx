@@ -42,19 +42,19 @@ function Home(){
                     <div className="p3 row">
                         <div className="info column">
                             <h1 className="rosa">Como você pode ajudar?</h1>
-                            <ul className="mar0">
+                            <ul className="mar0 bold">
                                 <li>Faça uma doação</li>
                                 <li>Seja voluntário</li>
                                 <li>Divulgue nossa causa</li>
                                 <li>Apoie nossos projetos</li>                        
                             </ul>
-                            <a href="">Saiba Mais!</a>
+                            <a className="f_rosa branco" href="">Saiba Mais!</a>
                         </div>
 
                         <div className="info column">
-                            <h1 className="verde">Nossa História!</h1>
-                            <h3 className="mar0">A Casa da Criança de Capivari nasceu com o propósito de oferecer apoio e acolhimento a crianças e adolescentes em situação de vulnerabilidade social.</h3>
-                            <a href="">Saiba Mais!</a>
+                            <h1 className="verde bold">Nossa História!</h1>
+                            <h3 className="mar0 bold">A Casa da Criança de Capivari nasceu com o propósito de oferecer apoio e acolhimento a crianças e adolescentes em situação de vulnerabilidade social.</h3>
+                            <a className="f_verde branco" href="">Saiba Mais!</a>
                         </div>
                     </div>
 

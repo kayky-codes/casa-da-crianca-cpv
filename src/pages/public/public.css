@@ -36,6 +36,18 @@
     background-color: #e8e8e8;
 }
 
+.bold{
+    font-weight: bolder;
+}
+
+.normal{
+    font-weight: normal;
+}
+
+.italico{
+    font-style: italic;
+}
+
 .column{
     display: flex;
     flex-direction: column;
@@ -252,10 +264,10 @@ footer h3{
 /* Parte 2 */
 /* Parte 3 */
 .conteiner_public .p3{
-    margin: 2vw 0 9vw 0;
-    padding: 0;
+    margin: 2vw 0 0 0;
+    padding-bottom: 3vw;
     width: 100%;
-    height: 20vw;
+    height: 24vw;
     justify-content: space-evenly;
 }
 
@@ -263,24 +275,36 @@ footer h3{
     width: 45%;
     height: 20vw;
     margin: 1vw;
-    padding: 3vw;
+    padding: 2vw 2vw 1vw 6vw;
     border-radius: 40px;
     background-color: #e8e8e8;
     text-align: left;
+    justify-content: space-between;
 }
 
 .conteiner_public .p3 .info h1{
-
+    margin: 0;
+    font-size: 3vw;
 }
 
 .conteiner_public .p3 .info h3{
-
+    font-size: 1.5vw;
 }
 
 .conteiner_public .p3 .info ul{
-
+    font-size: 1.5vw;
 }
 
+.conteiner_public .p3 .info a{
+    width: 30%;
+    padding: 0.5vw;
+    margin: 1vw 0 1vw 0;
+    border-radius: 30px;
+    font-size: 1.5vw;
+    text-align: center;
+    text-decoration: none;
+    align-self: flex-start;
+}
 
 /* Parte 3 */
 /* HOME */
@@ -313,19 +337,18 @@ footer h3{
 /* DIV 1 */
 /* DIV 2 */
 .p2_blocos{
-    display: flex;
     justify-content: space-evenly;
     padding: 2vw 0;
 }
 
-.p2_blocos .bloco{
+.bloco{
     width: 25%;
     padding: 1vw 2vw 2vw 2vw;
     border-radius: 80px;
     text-align: left;
 }
 
-.p2_blocos .bloco h2{
+.bloco h2{
     text-align: center;
 }
 
@@ -454,87 +477,183 @@ footer h3{
 /* Quem somos */
 
 /* Doações */
-.pagina {
+.doacoes{
+    padding-top: 3vw;
+}
+
+.doacoes .p1{
+    width: 65%;
+    height: 100%;
+    padding: 0 3vw 0 4vw;
+}
+
+.doacoes .p1 h1{
+    margin: 0 0 -1vw 0;
+    font-size: 4.7vw;
+}
+
+.doacoes .p1 h2{
+    width: 90%; 
+    font-size: 2.5vw;  
+}
+
+.doacoes .p1 p{
+    width: 90%; 
+    font-size: 2vw;
+}
+
+.doacoes .p1 a{
+    padding: 0.5vw 1.5vw 0.5vw 1.5vw;
+    font-size: 1.5vw;
+    border-radius: 30px;
+}
+
+.doacoes img {
+    width: 35%;
+    height: 45vw;
+    border-radius: 50px;
+    margin: 0 3vw 3vw 3vw;
+}
+
+.doacoes2{
     padding: 2vw;
-    font-family: Arial, sans-serif;
+    margin: 4vw 2vw 3vw 2vw;
+    border-radius: 30px;
+    text-align: center;
 }
 
-/* HERO */
-.hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #fff;
+.doacoes2 h1{
+    margin: -0.5vw 0 0 0;
+    font-size: 2.5vw;
 }
 
-.hero img {
-    width: 30%;
-    border-radius: 15px;
+.doacoes2 .img1{
+    width: 25%;
+    height: 35vw;
+    margin: 2vw 1vw 2vw 1vw;
+    border-radius: 80px;
 }
 
-.texto {
+.doacoes2 .img2{
+    width: 25%;
+    height: 25vw;
+    margin: 2vw 1vw 2vw 1vw;
+    border-radius: 80px;
+}
+
+.doacoes2 .texto{
     width: 50%;
+    margin: 1vw 3vw 1vw 3vw;
+    text-align: left;
+    font-size: 2vw;
 }
 
-.btn_verde {
-    background: #8bc34a;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
+.doacoes2 .texto p, .doacoes2 .texto2 p{
+    margin: 1.1vw 0;
 }
 
-/* DESTAQUE */
-.destaque {
-    display: flex;
-    background: #f28c8c;
-    padding: 20px;
-    border-radius: 20px;
-    margin-top: 20px;
-    gap: 20px;
+.doacoes2 .texto2{
+    width: 80%;
+    margin: 1vw 3vw 1vw 3vw;
+    text-align: left;
+    font-size: 2vw;
 }
 
-.destaque img {
-    width: 120px;
-    border-radius: 10px;
-}
-
-/* GALERIA */
-.galeria {
+.doacoes3-4 h1, 
+.doacoes3-4 p{
     text-align: center;
-    margin-top: 30px;
 }
 
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+.doacoes3-4 .d_blocos{
+    justify-content: space-evenly;
+    padding: 2vw 0;
+    font-size: 1.5vw;
 }
 
-.cards img {
-    width: 150px;
-    border-radius: 15px;
+.doacoes3-4 .d_blocos .bloco{
+    width: 27%;
 }
 
-/* DOAÇÕES */
-.doacoes {
-    text-align: center;
-    margin-top: 40px;
+.doacoes3-4 .d_blocos h2{
+    margin: 1vw 0 0 0;
 }
 
-.cards_doacao {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.doacoes3-4 .d_blocos h3, .doacoes3-4 .d_blocos h5{
+    font-weight:normal;
 }
 
-.card {
-    padding: 20px;
-    border-radius: 15px;
-    color: white;
-    width: 200px;
+.doacoes3-4 .d_blocos ul{
+    margin: 0 0 0 0;
+} 
+
+.doacoes3-4 .d_blocos h4, 
+.doacoes3-4 .d_blocos h5{
+    width: 70%;
 }
 
+.doacoes3-4 .d_blocos h4{
+    margin: 1.5vw 1vw 0 4vw;
+}
+
+.doacoes3-4 .d_blocos h5{
+    margin: 0 1vw 0 4vw;
+}
+
+.doacoes3-4 .bloco2{
+    margin: 1vw 2vw 2vw 2vw;
+    border-radius: 80px;
+    text-align: left;
+}
+
+.doacoes3-4 .texto{
+    margin: 1vw 0 3vw 0;
+}
+
+.doacoes3-4 .bloco2 h1, 
+.doacoes3-4 .bloco2 p{
+    text-align: left;
+}
+
+.doacoes3-4 .bloco2 h1{
+    width: 85%;
+    margin: 0 1vw 0 4vw;
+    font-size: 5vw;
+}
+
+.doacoes3-4 .d_horario{
+    margin: -1vw 0 0 4vw;
+    width: 100%;
+}
+
+.doacoes3-4 .d_horario h2{
+    width: 90%;
+    margin: 4vw 1vw 0 0;
+    font-size: 3vw;
+}
+
+.doacoes3-4 .d_horario h3, .doacoes3-4 .d_horario h4{
+    margin: 1vw 1vw 1vw 0;
+    font-size: 2vw;
+}
+
+.doacoes3-4 .d_horario h4{
+    font-weight: normal;
+}
+
+.doacoes3-4 .d_horario .d_uteis{
+    width: 50%;
+    padding-right: 2.5vw;
+}
+
+.doacoes3-4 img{
+    width: 80%;
+    height: 35vw;
+    margin: 2vw 5vw 2vw 1vw;
+    border: #fff 3px solid;
+    border-radius: 80px;
+}
+
+/* Doações */
 
 /* ENTREGA */
 .entrega {
