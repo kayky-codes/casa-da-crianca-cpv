@@ -1,4 +1,11 @@
-/* Global */
+/* #region Global */
+.gradiente{
+    background: linear-gradient(
+    #0095da,   /* azul */
+    #fc949a,   /* rosa claro */
+    #74c137    /* verde claro */
+    );
+}
 
 .f_branco{
     background-color: #fff;
@@ -30,6 +37,10 @@
 
 .branco{
     color: #ffffff;
+}
+
+.preto{
+    color: #000;
 }
 
 .f_cinza{
@@ -74,10 +85,9 @@
     justify-content: center;
 }
 
-/* Global */
+/* #endregion Global */
 
-
-/* Header */
+/* #region Header */
 header{
     background-color: #f5f5f5;
     text-decoration: none;
@@ -108,8 +118,9 @@ header .navbar h2.link a{
     color: inherit;
 }
 
-/* Header */
-/* Footer */
+/* #endregion Header */
+
+/* #region Footer */
 
 footer{
     background-color: #0095da;
@@ -182,8 +193,9 @@ footer h3{
     font-size: 0.8vw;
 }
 
-/* Footer */
-/* Home */
+/* #endregion Footer */
+
+/* #region Home */
 
 .conteiner_public{
     background-color: #f5f5f5;
@@ -307,9 +319,9 @@ footer h3{
 }
 
 /* Parte 3 */
-/* HOME */
+/* #endregion HOME */
 
-/* Quem somos */
+/* #region Quem somos */
 /* DIV 1 */
 .conteiner_public #qsomos.div_texto {
     width: 50%;
@@ -395,8 +407,6 @@ footer h3{
     height: 20vw;
     border-radius:  60px;
 }
-
-
 /* DIV 4 */
 .p4{
     background-color: #0095da;
@@ -474,35 +484,35 @@ footer h3{
     border-radius: 20px;
     text-align: left;
 }
-/* Quem somos */
+/* #endregion Quem somos */
 
-/* Doações */
+/* #region Doações */
 .doacoes{
     padding-top: 3vw;
 }
 
-.doacoes .p1{
+.doacoes .texto{
     width: 65%;
     height: 100%;
     padding: 0 3vw 0 4vw;
 }
 
-.doacoes .p1 h1{
+.doacoes .texto h1{
     margin: 0 0 -1vw 0;
     font-size: 4.7vw;
 }
 
-.doacoes .p1 h2{
+.doacoes .texto h2{
     width: 90%; 
     font-size: 2.5vw;  
 }
 
-.doacoes .p1 p{
+.doacoes .texto p{
     width: 90%; 
     font-size: 2vw;
 }
 
-.doacoes .p1 a{
+.doacoes .texto a{
     padding: 0.5vw 1.5vw 0.5vw 1.5vw;
     font-size: 1.5vw;
     border-radius: 30px;
@@ -653,76 +663,131 @@ footer h3{
     border-radius: 80px;
 }
 
-/* Doações */
+/* #endregion Doações */
 
-/* ENTREGA */
-.entrega {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #42a5f5;
-    color: white;
-    padding: 20px;
+/* #region Atividades */
+/* #region div1*/
+.atividades .texto,
+.atividades .img{
+     width: 50%;
+}
+
+.atividades .texto{
+    padding: 0 0 2vw 10vw;
+}
+
+.atividades h1{
+    margin: 0 1vw 1vw 1vw;
+    font-size: 6vw;
+}
+
+.atividades h2{
+    margin: 1vw;
+    font-size: 2vw;
+}
+
+.atividades p{
+    margin: 2vw 1vw 0 1vw;
+    font-size: 1.5vw;
+}
+
+.atividades ul{
+    margin: 0 1vw 1vw 1vw;
+    font-size: 1.5vw;
+}
+
+.atividades .img img{
+    position: absolute;
+    width: 19%;
+    height: 35%;
+    margin: 0 0 0 10vw;
+    border: #fff 1px solid;
+}
+
+.atividades .img #img1{
+    margin: 3vw 1vw 1vw 5vw;
+    transform: rotate(-15deg);
+}
+
+.atividades .img #img2{
+    margin: 8vw 1vw 1vw 18vw;
+    transform: rotate(20deg);
+}
+/* #endregion div1*/
+
+/* #region div2*/
+.atividades2{
+    width: 75%;
+    height: 21vw;
+    margin: 4vw 3vw;
+    padding: 1vw 10vw 1vw 10vw;
+    border-radius: 30px;
+    text-align: left;
+}
+
+.atividades2 p{
+    margin: 2vw 1vw 2vw 0;
+}
+
+.atividades2 .txt{
+    margin: 2vw 1vw 3vw 0;
+}
+
+.atividades2 a{
+    padding: 0.5vw 1.5vw 0.5vw 1.5vw;
     border-radius: 20px;
-    margin-top: 30px;
 }
 
-.entrega img {
-    width: 200px;
-    border-radius: 10px;
-}
-/* Doações */
+/* #endregion div2*/
 
-/* Atividades */
-.direita .atividades {
-    display: flex;
-    justify-content: space-between;
-    background: #f28c8c;
-    padding: 20px;
-    border-radius: 20px;
+/* #region div3*/
+.atividades3{
+    margin: 1vw 2vw;
+    padding: 7vw 5vw 7vw 3vw;
+    border-radius: 30px;
 }
 
-.atividades img {
-    width: 200px;
-    border-radius: 10px;
+.painel{
+    width: 70%;
+    margin-right: 2vw;
 }
 
-/* VOLUNTÁRIO */
-.voluntario {
-    background: #2196f3;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    border-radius: 20px;
-    margin-top: 20px;
+.atividades3 img{
+    width: 45%;
+    height: 20vw;
+    margin: 0 0 1vw 1vw;
+    outline: 3px solid white;
+    outline-offset: -3px;
+    border-radius: 50px;
 }
 
-.voluntario button {
-    background: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
+.atividades3 .texto{
+    width: 50%;
 }
 
-/* REFEIÇÕES */
-.refeicoes {
-    display: flex;
-    justify-content: space-between;
-    background: linear-gradient(to right, #66bb6a, #42a5f5);
-    padding: 20px;
-    border-radius: 20px;
-    margin-top: 20px;
+.atividades3 .texto h1{
+    margin: 2vw 1vw 0 0;
+    font-size: 4vw;
 }
 
-.refeicoes img {
-    width: 80px;
-    border-radius: 10px;
+.atividades3 .texto h2{
+    margin: -1.3vw 1vw 1vw 9vw;
+    font-size: 4vw;
 }
-/* Atividades */
 
+.atividades3 .texto p{
+    margin: 1vw;
+    font-size: 2vw;
+}
 
-/* Voluntario, Transparencia, Instalações */
+.atividades3 .texto ul{
+    font-size: 2vw;
+}
+
+/* #endregion div3*/
+/* #endregion Atividades */
+
+/* #region Voluntario, Transparencia, Instalações */
 .align_center{
     align-items: center;
 }
@@ -762,3 +827,4 @@ footer h3{
     background-color: white;
     color: #0095da;
 } 
+/* #endregion */

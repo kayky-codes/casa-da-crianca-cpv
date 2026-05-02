@@ -28,7 +28,7 @@ function Home(){
                         <img src={home_2} alt="" />
                     </div>
                     
-                    <div className="mural column">
+                    <div className="mural column gradiente">
                         <h1 className="branco">Mural</h1>
                         <h2 className="branco">Cada sorriso aqui carrega uma história de cuidado, esperança e transformação.</h2>
                         <div className="row">

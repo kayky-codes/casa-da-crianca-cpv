@@ -14,7 +14,7 @@ function Doacoes() {
             <Header />
             <main className="conteiner_public">
                 <div className="doacoes row">
-                    <div className="p1">
+                    <div className="texto">
                         <h1>SUA AJUDA</h1>
                         <h1>TRANSFORMA VIDAS !</h1>
                         <h2>Uma Pequena Doação Pode Mudar Um Grande Futuro.</h2>
