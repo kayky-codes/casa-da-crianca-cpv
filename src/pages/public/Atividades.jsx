@@ -67,7 +67,7 @@ function Atividades() {
                     </div>
                 </div>
 
-                <div className="doacoes3-4">
+                <div className="entrega">
                     <h1>Faça parte dessa corrente do bem.</h1>
                     <p>Sua doação ajuda a transformar o presente e construir o futuro de muitas crianças.</p>
 

@@ -1,9 +1,12 @@
 /* #region Global */
-.gradiente{
+.gradiente {
+    --angulo: 180deg;
+
     background: linear-gradient(
-    #0095da,   /* azul */
-    #fc949a,   /* rosa claro */
-    #74c137    /* verde claro */
+        var(--angulo),
+        #0095da,
+        #fc949a,
+        #74c137
     );
 }
 
@@ -63,6 +66,7 @@
     display: flex;
     flex-direction: column;
 }
+
 .row{
     display: flex;
     flex-direction: row;
@@ -86,6 +90,108 @@
 }
 
 /* #endregion Global */
+
+/* #region Compartilhado */
+.conteiner_public{
+    background-color: #f5f5f5;
+}
+
+/* #region Entrega */
+.entrega h1, 
+.entrega p{
+    text-align: center;
+}
+
+.entrega .d_blocos{
+    justify-content: space-evenly;
+    padding: 2vw 0;
+    font-size: 1.5vw;
+}
+
+.entrega .d_blocos .bloco{
+    width: 27%;
+}
+
+.entrega .d_blocos h2{
+    margin: 1vw 0 0 0;
+}
+
+.entrega .d_blocos h3, .entrega .d_blocos h5{
+    font-weight:normal;
+}
+
+.entrega .d_blocos ul{
+    margin: 0 0 0 0;
+} 
+
+.entrega .d_blocos h4, 
+.entrega .d_blocos h5{
+    width: 70%;
+}
+
+.entrega .d_blocos h4{
+    margin: 1.5vw 1vw 0 4vw;
+}
+
+.entrega .d_blocos h5{
+    margin: 0 1vw 0 4vw;
+}
+
+.entrega .bloco2{
+    margin: 1vw 2vw 2vw 2vw;
+    border-radius: 80px;
+    text-align: left;
+}
+
+.entrega .texto{
+    margin: 1vw 0 3vw 0;
+}
+
+.entrega .bloco2 h1, 
+.entrega .bloco2 p{
+    text-align: left;
+}
+
+.entrega .bloco2 h1{
+    width: 85%;
+    margin: 0 1vw 0 4vw;
+    font-size: 5vw;
+}
+
+.entrega .d_horario{
+    margin: -1vw 0 0 4vw;
+    width: 100%;
+}
+
+.entrega .d_horario h2{
+    width: 90%;
+    margin: 4vw 1vw 0 0;
+    font-size: 3vw;
+}
+
+.entrega .d_horario h3, .entrega .d_horario h4{
+    margin: 1vw 1vw 1vw 0;
+    font-size: 2vw;
+}
+
+.entrega .d_horario h4{
+    font-weight: normal;
+}
+
+.entrega .d_horario .d_uteis{
+    width: 50%;
+    padding-right: 2.5vw;
+}
+
+.entrega img{
+    width: 80%;
+    height: 35vw;
+    margin: 2vw 5vw 2vw 1vw;
+    border: #fff 3px solid;
+    border-radius: 80px;
+}
+/* #endregion Entrega */
+/* #endregion Compartilhada */
 
 /* #region Header */
 header{
@@ -196,11 +302,6 @@ footer h3{
 /* #endregion Footer */
 
 /* #region Home */
-
-.conteiner_public{
-    background-color: #f5f5f5;
-}
-
 /* Parte 1 */
 
 .conteiner_public .div_texto{
@@ -486,6 +587,105 @@ footer h3{
 }
 /* #endregion Quem somos */
 
+/* #region Transparencia*/
+/* #region T1 */
+.transparencia1{
+    padding: 1vw 3vw;
+    margin-bottom: 4vw;
+}
+
+.transparencia1 h1{
+    width: 50%;
+    margin: 3vw 0 2vw 1vw;
+    font-size: 5vw;
+}
+
+.transparencia1 img{
+    width: 50%;
+    margin: 1vw 3vw 1vw 0;
+    border-radius: 75px;
+}
+
+.transparencia1 h2{
+    margin: 1vw 1vw 1vw 0;
+}
+
+.transparencia1 p{
+    font-size: 1.8vw;
+}
+/* #endregion T1 */
+/* #region T2 */
+.t_m{
+    padding: 7vw 0 7vw 0;
+}
+
+.transparencia2{
+    padding: 0 5vw 3vw 5vw;
+    border-radius: 60px;
+    text-align: center;
+}
+
+.transparencia2 h1{
+    margin: 2vw 0 0 0;
+    font-size: 4vw;
+}
+
+.transparencia2 h2{
+    margin: -1vw 0 0 11vw;
+    font-size: 4vw;
+}
+
+.transparencia2 .topo p{
+    margin: 2vw 0 0 0;
+    text-align: left;
+    font-size: 2vw;
+}
+
+.transparencia2 .topo .inputs{
+    justify-content: space-between;
+}
+
+.transparencia2 .topo .inputs .inpt1{
+    width: 25vw;
+    height: 2vw;
+    border: #fff;
+    border-radius: 20px;
+}
+
+.transparencia2 .topo .inputs .inpt2{
+    width: 15vw;
+    height: 2vw;
+    border: #fff;
+    border-radius: 20px;
+}
+
+.transparencia2 .arquivos{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: 40vw;
+    margin-top: 2vw;
+    gap: 3vw 2vw;
+}
+
+.transparencia2 .arquivos .doc{
+    background-color: #f5f5f5;
+    border-radius: 40px;
+    align-items: center;
+}
+
+.transparencia2 .arquivos .doc img{
+    width: 100%;
+    height: 15vw;
+}
+
+.transparencia2 .arquivos .doc p{
+    width: 95%;
+    font-size: clamp(0.4em, 1.3vw, 3em);
+}
+
+/* #endregion T2 */
+/* #endregion Transparencia*/
+
 /* #region Doações */
 .doacoes{
     padding-top: 3vw;
@@ -569,100 +769,6 @@ footer h3{
     font-size: 2vw;
 }
 
-.doacoes3-4 h1, 
-.doacoes3-4 p{
-    text-align: center;
-}
-
-.doacoes3-4 .d_blocos{
-    justify-content: space-evenly;
-    padding: 2vw 0;
-    font-size: 1.5vw;
-}
-
-.doacoes3-4 .d_blocos .bloco{
-    width: 27%;
-}
-
-.doacoes3-4 .d_blocos h2{
-    margin: 1vw 0 0 0;
-}
-
-.doacoes3-4 .d_blocos h3, .doacoes3-4 .d_blocos h5{
-    font-weight:normal;
-}
-
-.doacoes3-4 .d_blocos ul{
-    margin: 0 0 0 0;
-} 
-
-.doacoes3-4 .d_blocos h4, 
-.doacoes3-4 .d_blocos h5{
-    width: 70%;
-}
-
-.doacoes3-4 .d_blocos h4{
-    margin: 1.5vw 1vw 0 4vw;
-}
-
-.doacoes3-4 .d_blocos h5{
-    margin: 0 1vw 0 4vw;
-}
-
-.doacoes3-4 .bloco2{
-    margin: 1vw 2vw 2vw 2vw;
-    border-radius: 80px;
-    text-align: left;
-}
-
-.doacoes3-4 .texto{
-    margin: 1vw 0 3vw 0;
-}
-
-.doacoes3-4 .bloco2 h1, 
-.doacoes3-4 .bloco2 p{
-    text-align: left;
-}
-
-.doacoes3-4 .bloco2 h1{
-    width: 85%;
-    margin: 0 1vw 0 4vw;
-    font-size: 5vw;
-}
-
-.doacoes3-4 .d_horario{
-    margin: -1vw 0 0 4vw;
-    width: 100%;
-}
-
-.doacoes3-4 .d_horario h2{
-    width: 90%;
-    margin: 4vw 1vw 0 0;
-    font-size: 3vw;
-}
-
-.doacoes3-4 .d_horario h3, .doacoes3-4 .d_horario h4{
-    margin: 1vw 1vw 1vw 0;
-    font-size: 2vw;
-}
-
-.doacoes3-4 .d_horario h4{
-    font-weight: normal;
-}
-
-.doacoes3-4 .d_horario .d_uteis{
-    width: 50%;
-    padding-right: 2.5vw;
-}
-
-.doacoes3-4 img{
-    width: 80%;
-    height: 35vw;
-    margin: 2vw 5vw 2vw 1vw;
-    border: #fff 3px solid;
-    border-radius: 80px;
-}
-
 /* #endregion Doações */
 
 /* #region Atividades */
@@ -718,24 +824,30 @@ footer h3{
 /* #region div2*/
 .atividades2{
     width: 75%;
-    height: 21vw;
+    height: 25vw;
     margin: 4vw 3vw;
     padding: 1vw 10vw 1vw 10vw;
     border-radius: 30px;
     text-align: left;
 }
 
+.atividades2 h1{
+    font-size: 4vw;
+}
+
 .atividades2 p{
-    margin: 2vw 1vw 2vw 0;
+    margin: 1vw 1vw 2vw 0;
+    font-size: 2vw;
 }
 
 .atividades2 .txt{
-    margin: 2vw 1vw 3vw 0;
+    margin: 1vw 1vw 2vw 0;
 }
 
 .atividades2 a{
     padding: 0.5vw 1.5vw 0.5vw 1.5vw;
     border-radius: 20px;
+    font-size: 2vw;
 }
 
 /* #endregion div2*/
@@ -787,44 +899,20 @@ footer h3{
 /* #endregion div3*/
 /* #endregion Atividades */
 
-/* #region Voluntario, Transparencia, Instalações */
-.align_center{
-    align-items: center;
-}
+/* #region Voluntario incompleto*/
 
-.box{
-    padding: 2vw;
-    border-radius: 20px;
-    margin-top: 2vw;
-}
 
-.img_media{
-    width: 20vw;
-    border-radius: 20px;
-}
 
-.img_pequena{
-    width: 10vw;
-    margin: 0.5vw;
-    border-radius: 15px;
-}
-
-.grid_docs{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1vw;
-    margin-top: 1vw;
-}
-
-.doc{
-    background-color: #d9d9d9;
-    padding: 1vw;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.btn_branco{
-    background-color: white;
-    color: #0095da;
-} 
 /* #endregion */
+
+/* #region Instalações incompleto*/
+
+/* #endregion Instalações */
+
+/* #region Ações incompleto*/
+
+/* #endregion Ações */
+
+/* #region Contato incompleto*/
+
+/* #endregion Contato */

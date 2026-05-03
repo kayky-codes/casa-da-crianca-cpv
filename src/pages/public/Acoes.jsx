@@ -6,62 +6,86 @@ function Acoes() {
     return(
         <>
             <Header />
-            <main className="pagina column">
-
-                <section className="row jc_around align_center">
+            <main className="conteiner_public">
+                <div className="acoes1 row jc_around align_center">
                     <div className="column">
-                    <h2>AÇÕES QUE TRANSFORMAM VIDAS TODOS OS DIAS</h2>
-                    <p>
-                        A Casa da Criança realiza ações contínuas voltadas ao desenvolvimento social.
-                    </p>
-                    <button className="btn_verde">QUERO SER VOLUNTÁRIO</button>
+                        <h2>AÇÕES QUE TRANSFORMAM VIDAS TODOS OS DIAS</h2>
+                        <p>
+                            A Casa da Criança realiza ações contínuas voltadas ao desenvolvimento social.
+                        </p>
+                        <a className="f_verde">QUERO SER VOLUNTÁRIO</a>
                     </div>
 
-                    <img className="img_media" src="/img/acoes.jpg" />
-                </section>
+                    {/* <img className="img_media" src={} /> */}
+                </div>
 
-                <section className="f_verde branco box column">
-                    <h3 className="jc_center row">TIPOS DE AÇÕES</h3>
+                <div className="bloco3 column f_verde">
+                    <div className="row">
+                        <div className="column">
+                            <h3>Por que ser voluntário?</h3>
+                            <ul>
+                                <li>Transforma vidas</li>
+                            </ul>
+                            <h3>Por que ser voluntário?</h3>
+                            <ul>
+                                <li>Transforma vidas</li>
+                            </ul>
+                            <h3>Por que ser voluntário?</h3>
+                            <ul>
+                                <li>Transforma vidas</li>
+                            </ul>
+                            <h3>Por que ser voluntário?</h3>
+                            <ul>
+                                <li>Transforma vidas</li>
+                            </ul>
+                        </div>
 
-                    <div className="row jc_around align_center">
-                    <ul>
-                        <li>Ações educativas</li>
-                        <li>Ações culturais</li>
-                        <li>Ações sociais</li>
-                    </ul>
-
-                    <img className="img_media" src="/img/criancas.jpg" />
+                        {/* <img src={} alt="" /> */}
+                        {/* <img src={} alt="" /> */}
                     </div>
-                </section>
+                </div>
 
-                <section className="f_rosa box column">
-                    <h3 className="jc_center row">PROJETOS ESPECIAIS</h3>
+                <div className="bloco4 column f_rosa">
+                    <div className="row">
+                        <div className="column">
+                            <h3>Por que ser voluntário?</h3>
+                            <p>asdada</p>
+                            <h3>Por que ser voluntário?</h3>
+                            <p>asdada</p>
+                            <h3>Por que ser voluntário?</h3>
+                            <p>asdada</p>
+                            <h3>Por que ser voluntário?</h3>
+                            <p>asdada</p>
+                        </div>
 
-                    <div className="row jc_center">
-                    <img className="img_pequena" src="/img/projeto1.jpg" />
-                    <img className="img_pequena" src="/img/projeto2.jpg" />
+                        {/* <img src={} alt="" /> */}
+                        {/* <img src={} alt="" /> */}
                     </div>
-                </section>
+                </div>
 
-                <section className="column">
-                    <h3 className="jc_center row">Veja algumas ações que já ocorreram!</h3>
+                <div className="t_fotos">
+                    <h3>Veja algumas ações</h3>
+                    <p>asdasdasd</p>
+                </div>
 
-                    <div className="row jc_center">
-                    <img className="img_pequena" src="/img/acao1.jpg" />
-                    <img className="img_pequena" src="/img/acao2.jpg" />
-                    <img className="img_pequena" src="/img/acao3.jpg" />
-                    <img className="img_pequena" src="/img/acao4.jpg" />
+                <div className="fotos">
+                    <img src="/img/acao1.jpg" />
+                    <img src="/img/acao2.jpg" />
+                    <img src="/img/acao3.jpg" />
+                </div>
+
+                <div className="comecar row">
+                    <div className="column">
+                        <h3>Pronto para começar?</h3>
+                        <p></p>
+                        <p className="bold"></p>
                     </div>
-                </section>
 
-                <section className="f_azul branco box row jc_around align_center">
-                    <div>
-                    <h3>Pronto para Começar?</h3>
-                    <p>Sua presença faz toda diferença.</p>
+                    <div className="column">
+                        <a className="f_verde">Quero ajudar</a>
+
                     </div>
-
-                    <button className="btn_branco">Quero ser voluntário</button>
-                </section>
+                </div>
 
             </main>
             <Footer />

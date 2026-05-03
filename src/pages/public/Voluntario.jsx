@@ -6,48 +6,83 @@ function Voluntario() {
     return(
         <>
             <Header />
-            <main className="pagina meio">
+            <main className="conteiner_public">
+                <div className="voluntario1 row">
+                    <div className="column">
+                        <h1>FAÇA PARTE DESSA TRANSFORMAÇÃO!</h1>
+                        <a className="f_verde">QUERO SER VOLUNTÁRIO</a>
+                    </div>
 
-            <section className="transformacao">
-                <div>
-                <h2>FAÇA PARTE DESSA TRANSFORMAÇÃO!</h2>
-                <button className="btn_verde">QUERO SER VOLUNTÁRIO</button>
+                    {/* <img src={} /> */}
                 </div>
 
-                <img src="/img/moto.jpg" />
-            </section>
+                <div className="bloco3 column f_rosa">
+                    <div className="row">
+                        <div className="column">
+                            <h3>Por que ser voluntário?</h3>
+                            <ul>
+                                <li>Transforma vidas</li>
+                            </ul>
+                            <h3>Por que ser voluntário?</h3>
+                            <ul>
+                                <li>Transforma vidas</li>
+                            </ul>
+                            <h3>Por que ser voluntário?</h3>
+                            <ul>
+                                <li>Transforma vidas</li>
+                            </ul>
+                            <h3>Por que ser voluntário?</h3>
+                            <ul>
+                                <li>Transforma vidas</li>
+                            </ul>
+                        </div>
 
-            <section className="voluntario_info">
-                <h3>Por que ser voluntário?</h3>
-                <ul>
-                <li>Transforma vidas</li>
-                <li>Faz diferença</li>
-                <li>Ajuda a comunidade</li>
-                </ul>
-            </section>
-
-            <section className="contribuir">
-                <h3>Como você pode contribuir</h3>
-                <div className="cards">
-                <img src="/img/galeria1.jpg" />
-                <img src="/img/galeria2.jpg" />
+                        {/* <img src={} alt="" /> */}
+                        {/* <img src={} alt="" /> */}
+                    </div>
                 </div>
-            </section>
 
-            <section className="acoes">
-                <h3>Veja algumas ações</h3>
-                <div className="galeria">
-                <img src="/img/acao1.jpg" />
-                <img src="/img/acao2.jpg" />
-                <img src="/img/acao3.jpg" />
+                <div className="bloco4 column f_azul">
+                    <div className="row">
+                        <div className="column">
+                            <h3>Por que ser voluntário?</h3>
+                            <p>asdada</p>
+                            <h3>Por que ser voluntário?</h3>
+                            <p>asdada</p>
+                            <h3>Por que ser voluntário?</h3>
+                            <p>asdada</p>
+                            <h3>Por que ser voluntário?</h3>
+                            <p>asdada</p>
+                        </div>
+
+                        {/* <img src={} alt="" /> */}
+                        {/* <img src={} alt="" /> */}
+                    </div>
                 </div>
-            </section>
 
-            <section className="cta">
-                <h3>Pronto para começar?</h3>
-                <button className="btn_azul">Quero ajudar</button>
-            </section>
+                <div className="t_fotos">
+                    <h3>Veja algumas ações</h3>
+                    <p>asdasdasd</p>
+                </div>
 
+                <div className="fotos">
+                    <img src="/img/acao1.jpg" />
+                    <img src="/img/acao2.jpg" />
+                    <img src="/img/acao3.jpg" />
+                </div>
+
+                <div className="comecar row">
+                    <div className="column">
+                        <h3>Pronto para começar?</h3>
+                        <p></p>
+                        <p className="bold"></p>
+                    </div>
+
+                    <div className="column">
+                        <a className="f_verde">Quero ajudar</a>
+
+                    </div>
+                </div>
             </main>
             <Footer />
         </>
