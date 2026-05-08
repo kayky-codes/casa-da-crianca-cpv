@@ -98,59 +98,59 @@ function Qsomos() {
                     <h1 className="mar0">Nossos Diretores</h1>
 
                     <div className="linha_cards row">
-                        <div className="card column">
+                        <div className="card column f_cinza2">
                             <img src="" alt="" />                    
                             <div className="texto column">
-                                <p>Pedro Sérgio Bottesini Ramalho</p>
-                                <p><b>2º Vice - Presidente</b></p>
+                                <p className="mar0">Pedro Sérgio Bottesini Ramalho</p>
+                                <p className="mar0"><b>2º Vice - Presidente</b></p>
                             </div>
                         </div>
 
-                        <div className="card column">
+                        <div className="card column f_cinza2">
                             <img src="" alt="" />                    
                             <div className="texto column">
-                                <p>Nadia Paes Piazentino</p>
-                                <p><b>1° Secretaria</b></p>
+                                <p className="mar0">Nadia Paes Piazentino</p>
+                                <p className="mar0"><b>1° Secretaria</b></p>
                             </div>
                         </div>
 
-                        <div className="card column">
+                        <div className="card column f_cinza2">
                             <img src="" alt="" />                    
                             <div className="texto column">
-                                <p>Aparecida de Fátima Cristoforo Laucci</p>
-                                <p><b>2° Secretaria</b></p>
+                                <p className="mar0">Aparecida de Fátima Cristoforo Laucci</p>
+                                <p className="mar0"><b>2° Secretaria</b></p>
                             </div>
                         </div>
 
-                        <div className="card column">
+                        <div className="card column f_cinza2">
                             <img src="" alt="" />                    
                             <div className="texto column">
-                                <p>Leonardo Carrara</p>
-                                <p><b>1° Tesoureiro</b></p>
+                                <p className="mar0">Leonardo Carrara</p>
+                                <p className="mar0"><b>1° Tesoureiro</b></p>
                             </div>
                         </div>
 
-                        <div className="card column">
+                        <div className="card column f_cinza2">
                             <img src="" alt="" />                    
                             <div className="texto column">
-                                <p>Paulo de Tarso Juliani</p>
-                                <p><b>2° Tesoureiro</b></p>
+                                <p className="mar0">Paulo de Tarso Juliani</p>
+                                <p className="mar0"><b>2° Tesoureiro</b></p>
                             </div>
                         </div>
 
-                        <div className="card column">
+                        <div className="card column f_cinza2">
                             <img src="/img/exemplo4.jpg" alt="" />                    
                             <div className="texto column">
-                                <p>Marcos Marrocco</p>
-                                <p><b>Presidente</b></p>
+                                <p className="mar0">Marcos Marrocco</p>
+                                <p className="mar0"><b>Presidente</b></p>
                             </div>
                         </div>
 
-                        <div className="card column">
+                        <div className="card column f_cinza2">
                             <img src="/img/exemplo4.jpg" alt="" />                    
                             <div className="texto column">
-                                <p>Carlos Roberto Laucci</p>
-                                <p><b>1° Vice-Presidente</b></p>
+                                <p className="mar0">Carlos Roberto Laucci</p>
+                                <p className="mar0"><b>1° Vice-Presidente</b></p>
                             </div>
                         </div>
                     </div>
@@ -158,48 +158,48 @@ function Qsomos() {
                         <h1 className="mar0">Conselho Fiscal</h1>
                         <h1 className="mar0">Suplentes</h1>
                     </div>
-                    <div className="linha_cards2 jc_around">
+                    <div className="linha_cards2 row jc_around">
                         <div className="seg row">
-                            <div className="card">
+                            <div className="card column f_cinza2">
                                 <img src="" alt="" />                        
                                 <div className="texto column">
-                                    <p>Carlos Giraldi</p>
+                                    <p className="mar0">Carlos Giraldi</p>
                                 </div>
                             </div>
 
-                            <div className="card">
+                            <div className="card column f_cinza2">
                                 <img src="/img/exemplo4.jpg" alt="" />                        
                                 <div className="texto column">
-                                    <p>Antônio Carlos Rossi</p>
+                                    <p className="mar0">Antônio Carlos Rossi</p>
                                 </div>
                             </div>
 
-                            <div className="card">
+                            <div className="card column f_cinza2">
                                 <img src="/img/exemplo4.jpg" alt="" />                        
                                 <div className="texto column">
-                                    <p>Célia Maria Giacomini Juliani</p>                                    
+                                    <p className="mar0">Célia Maria Giacomini Juliani</p>                                    
                                 </div>
                             </div>
                         </div>
                         <div className="seg row">
-                            <div className="card">
+                            <div className="card column f_cinza2">
                                 <img src="" alt="" />
                                 <div className="texto column">
-                                    <p>Maria Aparecida Schincariol de Castro Carvalho</p>                                    
+                                    <p className="mar0">Maria Aparecida Schincariol de Castro Carvalho</p>                                    
                                 </div>
                             </div>
 
-                            <div className="card">
+                            <div className="card column f_cinza2">
                                 <img src="/img/exemplo4.jpg" alt="" />                        
                                 <div className="texto column">
-                                    <p>Alex Roberto Laucci</p>                                    
+                                    <p className="mar0">Alex Roberto Laucci</p>                                    
                                 </div>
                             </div>
 
-                            <div className="card">
+                            <div className="card column f_cinza2">
                                 <img src="/img/exemplo4.jpg" alt="" />                        
                                 <div className="texto column">
-                                    <p>Vânia Rosatto de Carvalho Marrocco</p>                                    
+                                    <p className="mar0">Vânia Rosatto de Carvalho Marrocco</p>                                    
                                 </div>
                             </div>       
                         </div>                     

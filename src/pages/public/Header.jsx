@@ -15,7 +15,7 @@ function Header() {
                 <h2 className="link"><Link to="/voluntario">Voluntáriado</Link></h2>
                 <h2 className="link"><Link to="/instalacoes">Instalações</Link></h2>
                 <h2 className="link"><Link to="/acoes">Ações</Link></h2>
-                <h2 className="link"><Link to="/">Mais</Link></h2>
+                <h2 className="link"><Link to="/contato">Contato</Link></h2>
             </div>
         </header>
     );

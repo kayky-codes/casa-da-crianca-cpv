@@ -24,7 +24,7 @@ function Home(){
                         <img className="div_img" src={home_1} alt="" />
                     </div>
 
-                    <div className="p2">
+                    <div className="banner">
                         <img src={home_2} alt="" />
                     </div>
                     

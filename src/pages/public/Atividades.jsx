@@ -30,8 +30,8 @@ function Atividades() {
                     </div>
 
                     <div className="img">
-                        <img id="img1" src={ong} />
-                        <img id="img2" src={ong2} />
+                        <img className="img1" src={ong} />
+                        <img className="img2" src={ong2} />
                     </div>
                 </div>
 

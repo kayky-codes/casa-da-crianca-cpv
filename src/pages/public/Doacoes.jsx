@@ -28,11 +28,11 @@ function Doacoes() {
                     <img src={comida} alt="" />
                 </div>
 
-                <div className="doacoes2 column f_rosa branco">
+                <div className="div_bloco column f_rosa branco" id="doacoes">
                     <h1>Sua doação vira cuidado, aprendizado e esperança</h1>
                     <div className="row">
-                        <img className="img1" src={d1} />
-                        <img className="img1" src={d2} />
+                        <img className="img_1" src={d1} />
+                        <img className="img_1" src={d2} />
                     
                         <div className="column texto">
                             <p>Cada contribuição recebida ajuda a garantir:</p>
@@ -50,7 +50,7 @@ function Doacoes() {
                     </div>
                 </div>
 
-                <div className="doacoes2 column f_branco">
+                <div className="div_bloco column f_branco" id="doacoes">
                     <h1>Ao doar, você ajuda a manter sonhos vivos !</h1>
                     <div className="row">                        
                         <div className="column texto2">
@@ -59,8 +59,8 @@ function Doacoes() {
                             <p>💛 Sua solidariedade faz toda a diferença.</p>
                         </div>
 
-                        <img className="img2" src={d3} />
-                        <img className="img2" src={d4} />
+                        <img className="img_2" src={d3} />
+                        <img className="img_2" src={d4} />
                     </div>
                 </div>
 
