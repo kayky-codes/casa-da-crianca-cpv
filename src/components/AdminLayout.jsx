@@ -41,11 +41,8 @@ function AdminLayout({ children }) {
 
       {/* MENU CENTRALIZADO */}
       <nav className="menu">
-
-        <NavLink to="/admin" end className="link"> <FaHandHoldingHeart /> Doações e Refeições </NavLink>
+        <NavLink to="/admin" className="link"><FaFileInvoice /> Prestar Contas </NavLink>
         <NavLink to="/admin/posts" className="link"><FaNewspaper /> Posts </NavLink>
-        <NavLink to="/admin/contas" className="link"><FaFileInvoice /> Prestar Contas </NavLink>
-        {/* <NavLink to="/admin/informacoes" className="link"><FaInfoCircle /> Informações Gerais </NavLink> */}
         <NavLink to="/admin/colaboradores" className="link"><FaHandHoldingHeart /> Colaboradores </NavLink>
         <NavLink to="/admin/usuarios" className="link"><FaUsers /> Cadastrar Novo Usuário </NavLink>
 
