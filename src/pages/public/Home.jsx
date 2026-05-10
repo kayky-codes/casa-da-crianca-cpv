@@ -13,12 +13,12 @@ import { supabase } from "../../lib/supabaseClient";
 
 function Home(){
 
-        useEffect(() => {
-            carregarMensagem()
-        }, []);
+    useEffect(() => {
+        carregarMensagem(),
+        teste()
+    }, []);
 
-        async function carregarMensagem() {
-
+    async function carregarMensagem() {
         const { data, error } = await supabase
                 .from('mensagem')
                 .select('comprimentos')
@@ -33,6 +33,19 @@ function Home(){
             console.log(data[0].comprimentos)
         }
     }
+
+    //temporario, somente para ver o acesso ao banco de dados, depois retirar
+    async function teste() {
+        const { data, error } = await supabase
+                .from('teste')
+                .insert([{}]);
+
+        if (error) {
+            console.log('Erro:', error)
+        } else {
+            console.log('Sucesso:', data)
+        }
+   }
 
         return(
             <>
