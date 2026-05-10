@@ -43,7 +43,7 @@ function Home(){
         if (error) {
             console.log('Erro:', error)
         } else {
-            console.log('Sucesso:', data)
+            console.log('Horario salvo!')
         }
    }
 
