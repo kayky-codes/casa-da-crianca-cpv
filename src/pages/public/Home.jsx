@@ -21,7 +21,7 @@ function Home(){
 
         const { data, error } = await supabase
                 .from('mensagem')
-                .select('*')
+                .select('comprimentos')
                 .limit(1);
 
         if (error) {
@@ -29,7 +29,9 @@ function Home(){
             return
         }
 
-        console.log(data[0])
+        if (data.length > 0) {
+            console.log(data[0].comprimentos)
+        }
     }
 
         return(
@@ -39,7 +41,7 @@ function Home(){
                     <div className="row">
                         <div className="div_texto">
                             <h1><b className="azul">CASA</b><b className="verde">DA</b></h1>
-                            <h1 className="t1 rosa">CRIANÇA TESTE</h1>
+                            <h1 className="t1 rosa">CRIANÇA</h1>
                             <h2 className="t2">Transformando vidas através do cuidado e da educação</h2>
                             <h2 className="t3">A Casa da Criança de Capivari é uma instituição sem fins lucrativos que acolhe, orienta e acompanha crianças e adolescentes, promovendo desenvolvimento social, educacional e humano.</h2>
                         </div>
