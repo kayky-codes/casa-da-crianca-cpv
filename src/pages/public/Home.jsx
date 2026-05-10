@@ -8,7 +8,30 @@ import ong2 from "/src/assets/img_ong2.png";
 import ong3 from "/src/assets/img_ong3.png";
 import ong4 from "/src/assets/img_ong4.png";
 
+import { useState, useEffect } from "react";
+import { supabase } from "../../lib/supabaseClient";
+
 function Home(){
+
+        useEffect(() => {
+            carregarMensagem()
+        }, []);
+
+        async function carregarMensagem() {
+
+        const { data, error } = await supabase
+                .from('mensagem')
+                .select('*')
+                .limit(1);
+
+        if (error) {
+            console.log('Erro:', error)
+            return
+        }
+
+        console.log(data[0])
+    }
+
         return(
             <>
                 <Header />
@@ -16,7 +39,7 @@ function Home(){
                     <div className="row">
                         <div className="div_texto">
                             <h1><b className="azul">CASA</b><b className="verde">DA</b></h1>
-                            <h1 className="t1 rosa">CRIANÇA</h1>
+                            <h1 className="t1 rosa">CRIANÇA TESTE</h1>
                             <h2 className="t2">Transformando vidas através do cuidado e da educação</h2>
                             <h2 className="t3">A Casa da Criança de Capivari é uma instituição sem fins lucrativos que acolhe, orienta e acompanha crianças e adolescentes, promovendo desenvolvimento social, educacional e humano.</h2>
                         </div>
