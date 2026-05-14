@@ -594,7 +594,6 @@ header .navbar h2.link a{
 /* #region Footer */
 
 footer{
-    background-color: #0095da;
     width: 100%;
     height: 7vw;
     justify-content: space-evenly;
@@ -1410,3 +1409,52 @@ footer h3{
 /* #endregion Contato2 */
 
 /* #endregion Contato */
+
+/* #region Logar */
+.conteiner_logar{
+    height: 100vh;
+    align-items: center;
+}
+
+.conteiner_logar .div_bloco{
+    width: 30%;
+    padding: 3vw;
+    border: #fff 1px solid;
+}
+
+.conteiner_logar .div_bloco h1{
+    margin: 3vw 4vw 3vw 4vw;
+    font-size: 5vw; 
+   -webkit-text-stroke: 1px #00000086;
+}
+
+.conteiner_logar .div_bloco h1 b{
+    
+    
+}
+
+.conteiner_logar .div_bloco input{
+    width: 90%;
+    height: 3vw;
+    margin: 1vw;
+    padding-left: 1vw;
+    border: #00000086 1px solid;
+    border-radius: 2vw;
+    font-size: 1.5vw;
+}
+
+.conteiner_logar .div_bloco button{
+    width: 8vw;
+    margin: 2vw 0 0.5vw 0;
+    border: #00000086 1px solid;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 2vw;
+}
+
+.conteiner_logar .div_bloco button:hover{
+    border: #1f1f1f 2px solid;
+    color: #505050;
+}
+
+/* #endregion Logar */

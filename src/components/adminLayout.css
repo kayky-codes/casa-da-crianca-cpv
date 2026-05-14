@@ -1,4 +1,4 @@
-/* BASE */
+/* #region Fundo */
 body {
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
@@ -9,9 +9,10 @@ body {
   min-height: 100vh;
 }
 
+/* #endregion Fundo */
+
 /* HEADER */
 .header {
-  display: flex;
   justify-content: space-between;
   align-items: center;
 
@@ -22,11 +23,6 @@ body {
 }
 
 /* LADO ESQUERDO */
-.header-left {
-  display: flex;
-  flex-direction: column;
-}
-
 .header-left h2 {
   margin: 0;
   font-size: 20px;
@@ -40,8 +36,6 @@ body {
 
 /* BOTÃO SAIR */
 .header-right button {
-  display: flex;
-  align-items: center;
   gap: 6px;
 
   background: white;
@@ -57,14 +51,9 @@ body {
 
 /* HOVER */
 .header-right button:hover {
-  color: white;
+  color: rgb(163, 163, 163);
 }
 
-/* LOGO */
-.logo h2 {
-  margin: 0;
-  color: #2b7bb9;
-}
 
 /* USER AREA */
 .user-area {

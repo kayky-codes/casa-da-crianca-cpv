@@ -1,6 +1,6 @@
 function Footer() {
     return(
-        <footer className="row">
+        <footer className="row f_azul">
             <div className="contato column">
                 <h2>Contato</h2>
                 <div className="tipos">

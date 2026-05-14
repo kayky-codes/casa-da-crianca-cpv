@@ -24,14 +24,23 @@ function Login() {
   }
 
   return (
-     <form onSubmit={entrar}>
-      <h2>Login</h2>
+    <>
+      <header>
 
-      <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-      <input type="password" placeholder="Senha" onChange={(e) => setSenha(e.target.value)}/>
+      </header>
+      <main className='conteiner_logar column jc_center gradiente'>
+        <div className='div_bloco column' style={{ "background-color": "#88888859" }}>
+          <form onSubmit={entrar}>
+            <h1 className='azul bold'><b>Login</b></h1>
+            
+            <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+            <input type="password" placeholder="Senha" onChange={(e) => setSenha(e.target.value)}/>
 
-      <button>Entrar</button>
-    </form>
+            <button className='f_cinza azul'>Entrar</button>
+          </form>
+        </div>
+      </main>
+    </>
   )
 
 }

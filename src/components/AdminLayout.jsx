@@ -5,6 +5,7 @@ import { useNavigate, NavLink } from 'react-router-dom'
 import { FaHome, FaNewspaper, FaSignOutAlt , FaInfoCircle, FaUsers, FaHandHoldingHeart, FaFileInvoice} from 'react-icons/fa'
 
 import './adminLayout.css'
+import "/src/pages/public/public.css";
 
 function AdminLayout({ children }) {
   const [nome, setNome] = useState('')
@@ -27,9 +28,9 @@ function AdminLayout({ children }) {
     <div className="layout">
 
       {/* HEADER */}
-      <header className="header">
+      <header className="header row">
 
-        <div className="header-left">
+        <div className="header-left column">
           <h2>Casa da Criança</h2>
           <span className="boas-vindas">Painel Administrador</span>
         </div>
