@@ -8,7 +8,45 @@ import ong2 from "/src/assets/img_ong2.png";
 import ong3 from "/src/assets/img_ong3.png";
 import ong4 from "/src/assets/img_ong4.png";
 
+import { useState, useEffect } from "react";
+import { supabase } from "../../lib/supabaseClient";
+
 function Home(){
+
+    useEffect(() => {
+        carregarMensagem(),
+        teste()
+    }, []);
+
+    async function carregarMensagem() {
+        const { data, error } = await supabase
+                .from('mensagem')
+                .select('comprimentos')
+                .limit(1);
+
+        if (error) {
+            console.log('Erro:', error)
+            return
+        }
+
+        if (data.length > 0) {
+            console.log(data[0].comprimentos)
+        }
+    }
+
+    //temporario, somente para ver o acesso ao banco de dados, depois retirar
+    async function teste() {
+        const { data, error } = await supabase
+                .from('teste')
+                .insert([{}]);
+
+        if (error) {
+            console.log('Erro:', error)
+        } else {
+            console.log('Horario salvo!')
+        }
+   }
+
         return(
             <>
                 <Header />
