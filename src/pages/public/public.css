@@ -1462,12 +1462,6 @@ footer h3{
 /* responsibility */
 @media screen and (max-width: 768px) {
 
-    .p2_blocos {
-        flex-direction: column !important;
-        align-items: center;
-        gap: 20px;
-    }
-
     .p2_blocos .bloco {
         width: 85% !important;
         border-radius: 40px !important;
@@ -1477,14 +1471,12 @@ footer h3{
         flex-direction: column !important;
         align-items: center;
     }
-
     .p3_qs .coluna .texto1,
     .p3_qs .coluna .texto2 {
         width: 100% !important;
         height: auto !important;
         font-size: 16px !important;
     }
-
     .p3_qs .coluna .texto1 img,
     .p3_qs .coluna .texto2 img {
         height: auto !important;
@@ -1496,16 +1488,12 @@ footer h3{
         border-radius: 40px !important;
         margin: 4vw 2vw !important;
     }
-
     .p4 .listas {
         flex-direction: column !important;
         align-items: center;
         gap: 15px;
     }
-            flex-direction: column !important;
-        padding: 20px !important;
-        border-radius: 20px !important;
-    }
+
     /* --- TRANSPARÊNCIA --- */
     .transparencia1 {
         flex-direction: column !important;
@@ -1551,7 +1539,8 @@ footer h3{
     .transparencia2 .arquivos .doc p {
         font-size: 13px !important;
     }
-     /* --- DOAÇÃO (ONDE ENTREGAR) --- */
+
+    /* --- DOAÇÃO (ONDE ENTREGAR) --- */
     .entrega .bloco2 {
         flex-direction: column !important;
         border-radius: 40px !important;
@@ -1595,6 +1584,8 @@ footer h3{
         margin: 20px 0 !important;
         border-radius: 30px !important;
     }
+
+    /* --- ATIVIDADES (ONDE ENTREGAR) --- */
     .atividades2 {
         width: 90% !important;
         height: auto !important;
@@ -1613,6 +1604,12 @@ footer h3{
         display: inline-block;
         font-size: 18px !important;
         padding: 10px 20px !important;
+    }
+
+    .atividades3 {
+        flex-direction: column !important;
+        padding: 20px !important;
+        border-radius: 20px !important;
     }
     .atividades3 .painel {
         width: 100% !important;
@@ -1642,11 +1639,8 @@ footer h3{
     }
 }
 
-
-}
-
-
 @media screen and (max-width: 480px) {
+
     .p2_blocos .bloco {
         width: 75% !important;
         padding: 20px 15px !important;
@@ -1664,7 +1658,32 @@ footer h3{
         padding: 20px 10px !important;
     }
 
+    /* --- TRANSPARÊNCIA --- */
+    .transparencia1 h1 {
+        font-size: 26px !important;
+    }
+    .transparencia1 p {
+        font-size: 15px !important;
+    }
 
+    .transparencia2 h1,
+    .transparencia2 h2 {
+        font-size: 22px !important;
+    }
+    .transparencia2 .topo .inputs .inpt1,
+    .transparencia2 .topo .inputs .inpt2 {
+        width: 100% !important;
+    }
+    .transparencia2 .arquivos {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+    .transparencia2 .arquivos .doc img {
+        height: 60px !important;
+    }
+    .transparencia2 .arquivos .doc p {
+        font-size: 11px !important;
+    }
 
     /* --- DOAÇÃO (ONDE ENTREGAR) --- */
     .entrega .bloco2 {
@@ -1688,12 +1707,9 @@ footer h3{
 
     /* --- ATIVIDADES (ONDE ENTREGAR) --- */
     .atividades2 {
-        width: 90% !important;
-        height: auto !important;
-        margin: 4vw auto !important;
-        padding: 20px !important;
-        border-radius: 20px !important;
-        text-align: center !important;
+        border-radius: 25px !important;
+        margin: 5px 5px !important;
+        padding: 10px !important;
     }
     .atividades2 h1 {
         font-size: 25px !important;
