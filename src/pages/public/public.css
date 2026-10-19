@@ -1506,6 +1506,7 @@ footer h3{
 
 }
 
+
 @media screen and (max-width: 480px) {
     .p2_blocos .bloco {
         width: 75% !important;
@@ -1523,7 +1524,8 @@ footer h3{
         border-radius: 25px !important;
         padding: 20px 10px !important;
     }
-  
+
+    /* --- TRANSPARÊNCIA --- */
     .transparencia1 h1 {
         font-size: 26px !important;
     }
@@ -1550,6 +1552,7 @@ footer h3{
         font-size: 11px !important;
     }
 
+    /* --- DOAÇÃO (ONDE ENTREGAR) --- */
     .entrega .bloco2 {
         border-radius: 25px !important;
         margin: 5px 5px !important;
@@ -1569,6 +1572,7 @@ footer h3{
         max-height: 200px;
     }
 
+    /* --- ATIVIDADES (ONDE ENTREGAR) --- */
     .atividades2 {
         border-radius: 25px !important;
         margin: 5px 5px !important;
