@@ -1458,3 +1458,141 @@ footer h3{
 }
 
 /* #endregion Logar */
+
+/* responsibility */
+@media screen and (max-width: 768px) {
+
+    .p2_blocos {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .p2_blocos .bloco {
+        width: 85% !important;
+        border-radius: 40px !important;
+    }
+
+    .p3_qs .coluna {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .p3_qs .coluna .texto1,
+    .p3_qs .coluna .texto2 {
+        width: 100% !important;
+        height: auto !important;
+        font-size: 16px !important;
+    }
+
+    .p3_qs .coluna .texto1 img,
+    .p3_qs .coluna .texto2 img {
+        height: auto !important;
+        max-height: 350px;
+        object-fit: cover;
+    }
+
+    .p4 {
+        border-radius: 40px !important;
+        margin: 4vw 2vw !important;
+    }
+
+    .p4 .listas {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 15px;
+    }
+
+
+}
+
+@media screen and (max-width: 480px) {
+    .p2_blocos .bloco {
+        width: 75% !important;
+        padding: 20px 15px !important;
+        border-radius: 60px !important;
+    }
+
+    .p3_qs .coluna .texto1,
+    .p3_qs .coluna .texto2 {
+        font-size: 14px !important;
+        padding: 10px 0 !important;
+    }
+
+    .p4 {
+        border-radius: 25px !important;
+        padding: 20px 10px !important;
+    }
+  
+    .transparencia1 h1 {
+        font-size: 26px !important;
+    }
+    .transparencia1 p {
+        font-size: 15px !important;
+    }
+
+    .transparencia2 h1,
+    .transparencia2 h2 {
+        font-size: 22px !important;
+    }
+    .transparencia2 .topo .inputs .inpt1,
+    .transparencia2 .topo .inputs .inpt2 {
+        width: 100% !important;
+    }
+    .transparencia2 .arquivos {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+    .transparencia2 .arquivos .doc img {
+        height: 60px !important;
+    }
+    .transparencia2 .arquivos .doc p {
+        font-size: 11px !important;
+    }
+
+    .entrega .bloco2 {
+        border-radius: 25px !important;
+        margin: 5px 5px !important;
+        padding: 10px !important;
+    }
+    .entrega .bloco2 h1 {
+        font-size: 25px !important;
+    }
+    .entrega .d_horario h2 {
+        font-size: 25px !important;
+    }
+    .entrega .d_horario h3, 
+    .entrega .d_horario h4 {
+        font-size: 19px !important;
+    }
+    .entrega img {
+        max-height: 200px;
+    }
+
+    .atividades2 {
+        border-radius: 25px !important;
+        margin: 5px 5px !important;
+        padding: 10px !important;
+    }
+    .atividades2 h1 {
+        font-size: 25px !important;
+    }
+    .atividades2 p {
+        font-size: 19px !important;
+    }
+    .atividades2 a {
+        font-size: 19px !important;
+    }
+
+    .atividades3 img {
+        margin-bottom: 10px;
+    }
+    .atividades3 .texto h1,
+    .atividades3 .texto h2 {
+        font-size: 20px !important;
+    }
+    .atividades3 .texto p,
+    .atividades3 .texto ul {
+        font-size: 19px !important;
+    }
+}
