@@ -1461,7 +1461,12 @@ footer h3{
 
 /* responsibility */
 @media screen and (max-width: 768px) {
-
+   
+    .p2_blocos {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 20px;
+    }
     .p2_blocos .bloco {
         width: 85% !important;
         border-radius: 40px !important;
@@ -1495,15 +1500,7 @@ footer h3{
     }
 
     /* --- TRANSPARÊNCIA --- */
-    .transparencia1 {
-        flex-direction: column !important;
-        text-align: center;
-    }
-    .transparencia1 h1,
-    .transparencia1 img {
-        width: 100% !important;
-        margin: 2vw 0 !important;
-    }
+
     .transparencia1 p {
         font-size: 18px !important;
     }
