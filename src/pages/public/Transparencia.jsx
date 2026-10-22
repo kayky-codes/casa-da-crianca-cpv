@@ -10,18 +10,15 @@ function Transparencia() {
         <>
             <Header />
             <main className="conteiner_public">
-                <div className="transparencia1 column">
-                    <h1 className="azul">PÁGINA DE TRANSPARÊNCIA</h1>
-
-                    <div className="row">
-                        <img src={t1} />
-
-                        <div className="column">
-                            <h2>Compromisso com a confiança e responsabilidade.</h2>
-                            <p>Na Casa da Criança de Capivari, acreditamos que a transparência é essencial para construir relações de confiança com a comunidade, parceiros e apoiadores.</p>                            
-                            <p>Por isso, trabalhamos com responsabilidade na gestão de todos os recursos recebidos, garantindo que cada contribuição seja utilizada de forma ética e eficiente.</p>
-                        </div>
+                <div className="transparencia1 hero row">
+                    <div className="texto">
+                        <h1 className="azul">PÁGINA DE TRANSPARÊNCIA</h1>
+                        <h2>Compromisso com a confiança e responsabilidade.</h2>
+                        <p>Na Casa da Criança de Capivari, acreditamos que a transparência é essencial para construir relações de confiança com a comunidade, parceiros e apoiadores.</p>
+                        <p>Por isso, trabalhamos com responsabilidade na gestão de todos os recursos recebidos, garantindo que cada contribuição seja utilizada de forma ética e eficiente.</p>
                     </div>
+
+                    <img src={t1} alt="" />
                 </div>
 
                 <div className="entrega">
