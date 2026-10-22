@@ -13,15 +13,15 @@ function Qsomos() {
             <main className="conteiner_public">
 
                 {/* DIV 1 */}
-                <div className="row f_branco">
-                    <div className="div_texto" id="qsomos">
-                        <h1 className="t1qs">QUEM SOMOS!</h1>
-                        <h2 className="t2qs">A Casa da Criança de Capivari nasceu com o propósito de oferecer apoio e acolhimento a crianças e adolescentes em situação de vulnerabilidade social.</h2>
-                        <h2 className="t2qs">Ao longo dos anos, construímos uma trajetória baseada no amor, respeito e compromisso com a transformação social.</h2>
-                        <h2 className="t2qs">Trabalhamos para garantir que cada criança tenha acesso a atividades educativas, acompanhamento e um ambiente seguro para crescer e se desenvolver.</h2>
+                <div className="hero row f_branco">
+                    <div className="texto">
+                        <h1>QUEM SOMOS!</h1>
+                        <p>A Casa da Criança de Capivari nasceu com o propósito de oferecer apoio e acolhimento a crianças e adolescentes em situação de vulnerabilidade social.</p>
+                        <p>Ao longo dos anos, construímos uma trajetória baseada no amor, respeito e compromisso com a transformação social.</p>
+                        <p>Trabalhamos para garantir que cada criança tenha acesso a atividades educativas, acompanhamento e um ambiente seguro para crescer e se desenvolver.</p>
                     </div>
 
-                    <img className="qs1" src={qs1} alt="" />
+                    <img src={qs1} alt="" />
                 </div>
 
                 {/* DIV 2 */}
