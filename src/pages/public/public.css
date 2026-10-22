@@ -1,3 +1,21 @@
+/* #region Escala desktop
+   Todas as medidas em vw foram trocadas por calc(var(--vw) * N).
+   --vw vale 1vw até a tela chegar em --site-max; acima disso o site
+   para de crescer e o conteúdo fica centralizado.
+   Para deixar tudo menor/maior em telas grandes, mude só --site-max. */
+:root{
+    --site-max: 1280px;
+    --vw: min(1vw, calc(var(--site-max) / 100));
+}
+
+main.conteiner_public,
+footer{
+    box-sizing: border-box;
+    padding-left: max(0px, calc((100% - var(--site-max)) / 2));
+    padding-right: max(0px, calc((100% - var(--site-max)) / 2));
+}
+/* #endregion Escala desktop */
+
 /* #region Global */
 .gradiente {
     --angulo: 180deg;
@@ -91,7 +109,7 @@
 
 .div_img{
     width: 45%;
-    height: 35vw;
+    height: calc(var(--vw) * 35);
 }
 
 .mar0{
@@ -121,7 +139,7 @@
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 32vw;
+    height: calc(var(--vw) * 32);
 }
 
 /* #region Entrega */
@@ -134,21 +152,21 @@
 }
 
 .entrega_texto h1{
-    margin: 4vw 1vw 0.5vw 1vw;
-    font-size: 3vw;
+    margin: calc(var(--vw) * 4) calc(var(--vw) * 1) calc(var(--vw) * 0.5) calc(var(--vw) * 1);
+    font-size: calc(var(--vw) * 3);
 }
 
 .entrega_texto p{
-    margin: 0 1vw 0.5vw 1vw;
-    font-size: 1.5vw;
+    margin: 0 calc(var(--vw) * 1) calc(var(--vw) * 0.5) calc(var(--vw) * 1);
+    font-size: calc(var(--vw) * 1.5);
 }
 
 .entrega_texto a{
-    width: 18vw;
-    margin-bottom: 4vw;
-    padding: 0.5vw;
-    font-size: 2vw;
-    border-radius: 3vw;
+    width: calc(var(--vw) * 18);
+    margin-bottom: calc(var(--vw) * 4);
+    padding: calc(var(--vw) * 0.5);
+    font-size: calc(var(--vw) * 2);
+    border-radius: calc(var(--vw) * 3);
     text-decoration: none;
 }
 
@@ -160,49 +178,58 @@
 }
 
 .entrega .d_blocos{
-    justify-content: space-evenly;
-    padding: 2vw 0;
-    font-size: 1.5vw;
+    justify-content: center;
+    align-items: stretch;      /* todos os cards com a mesma altura */
+    gap: calc(var(--vw) * 2);
+    padding: calc(var(--vw) * 2) calc(var(--vw) * 3);
 }
 
 .entrega .d_blocos .bloco{
-    width: 27%;
-    border-radius: 2vw;
+    flex: 1 1 0;               /* todos os cards com a mesma largura */
+    min-width: 0;
+    padding: calc(var(--vw) * 1.8) calc(var(--vw) * 2);
+    box-sizing: border-box;
+    border-radius: calc(var(--vw) * 2);
+    text-align: left;
 }
 
 .entrega .d_blocos h2{
-    margin: 1vw 0 0 0;
+    margin: 0 0 calc(var(--vw) * 0.8) 0;
+    font-size: max(18px, calc(var(--vw) * 2.1));
+    line-height: 1.2;
 }
 
-.entrega .d_blocos h3, .entrega .d_blocos h5{
-    font-weight:normal;
+.entrega .d_blocos h3{
+    margin: 0 0 calc(var(--vw) * 0.4) 0;
+    font-size: max(14px, calc(var(--vw) * 1.5));
+    font-weight: normal;
 }
 
 .entrega .d_blocos ul{
-    margin: 0 0 0 0;
-} 
-
-.entrega .d_blocos h4, 
-.entrega .d_blocos h5{
-    width: 70%;
+    margin: 0 0 calc(var(--vw) * 1) 0;
+    padding-left: 1.5em;
+    font-size: max(14px, calc(var(--vw) * 1.5));
 }
 
 .entrega .d_blocos h4{
-    margin: 1.5vw 1vw 0 4vw;
+    margin: calc(var(--vw) * 1) 0 calc(var(--vw) * 0.2) 0;
+    font-size: max(14px, calc(var(--vw) * 1.5));
 }
 
 .entrega .d_blocos h5{
-    margin: 0 1vw 0 4vw;
+    margin: 0;
+    font-size: max(13px, calc(var(--vw) * 1.3));
+    font-weight: normal;
 }
 
 .entrega .bloco2{
-    margin: 1vw 2vw 2vw 2vw;
+    margin: calc(var(--vw) * 1) calc(var(--vw) * 2) calc(var(--vw) * 2) calc(var(--vw) * 2);
     border-radius: 80px;
     text-align: left;
 }
 
 .entrega .texto{
-    margin: 1vw 0 3vw 0;
+    margin: calc(var(--vw) * 1) 0 calc(var(--vw) * 3) 0;
 }
 
 .entrega .bloco2 h1, 
@@ -212,24 +239,24 @@
 
 .entrega .bloco2 h1{
     width: 85%;
-    margin: 0 1vw 0 4vw;
-    font-size: 5vw;
+    margin: 0 calc(var(--vw) * 1) 0 calc(var(--vw) * 4);
+    font-size: calc(var(--vw) * 3.6);
 }
 
 .entrega .d_horario{
-    margin: -1vw 0 0 4vw;
+    margin: calc(var(--vw) * -1) 0 0 calc(var(--vw) * 4);
     width: 100%;
 }
 
 .entrega .d_horario h2{
     width: 90%;
-    margin: 4vw 1vw 0 0;
-    font-size: 3vw;
+    margin: calc(var(--vw) * 2.5) calc(var(--vw) * 1) 0 0;
+    font-size: calc(var(--vw) * 2.4);
 }
 
 .entrega .d_horario h3, .entrega .d_horario h4{
-    margin: 1vw 1vw 1vw 0;
-    font-size: 2vw;
+    margin: calc(var(--vw) * 1) calc(var(--vw) * 1) calc(var(--vw) * 1) 0;
+    font-size: calc(var(--vw) * 1.6);
 }
 
 .entrega .d_horario h4{
@@ -238,13 +265,13 @@
 
 .entrega .d_horario .d_uteis{
     width: 50%;
-    padding-right: 2.5vw;
+    padding-right: calc(var(--vw) * 2.5);
 }
 
 .entrega img{
     width: 80%;
-    height: 35vw;
-    margin: 2vw 5vw 2vw 1vw;
+    height: calc(var(--vw) * 28);
+    margin: calc(var(--vw) * 2) calc(var(--vw) * 5) calc(var(--vw) * 2) calc(var(--vw) * 1);
     border: #fff 3px solid;
     border-radius: 80px;
 }
@@ -253,39 +280,39 @@
 /* #region CARD */
 .linha_cards{
     justify-content: space-evenly;
-    margin-top: 1vw;
+    margin-top: calc(var(--vw) * 1);
 }
 
 .linha_cards2{
-    margin-top: 1vw;
+    margin-top: calc(var(--vw) * 1);
 }
 
 .linha_cards .card{
     width: 11%;
-    padding: 1vw;
+    padding: calc(var(--vw) * 1);
     border-radius: 20px;
     text-align: left;
 }
 
 .linha_cards2 .card{
     width: 26%;
-    padding: 1vw;
+    padding: calc(var(--vw) * 1);
     border-radius: 20px;
     text-align: left;
 }
 
 .linha_cards3 .card{
     width: 21%;
-    height: 5.5vw;
-    padding: 2vw 4vw 2vw 4vw;
-    margin: 1.5vw;
+    height: calc(var(--vw) * 5.5);
+    padding: calc(var(--vw) * 2) calc(var(--vw) * 4) calc(var(--vw) * 2) calc(var(--vw) * 4);
+    margin: calc(var(--vw) * 1.5);
     border-radius: 40px;
     text-align: left;
 }
 
 .card img{
     width: 100%;
-    height: 7vw;
+    height: calc(var(--vw) * 7);
     background-color: #0095da;
     border-radius: 20px;
 }
@@ -297,11 +324,11 @@
 }
 
 .card p{
-    font-size: 1vw;
+    font-size: calc(var(--vw) * 1);
 }
 
 .linha_cards3 .card .p2{
-    margin: 0 0 1vw 0;
+    margin: 0 0 calc(var(--vw) * 1) 0;
 }
 
 .seg{
@@ -313,24 +340,24 @@
 /* #region Twins_img */
 .twins_imgs{
     width: 40%;
-    margin-bottom: 4vw;
+    margin-bottom: calc(var(--vw) * 4);
 }
 
 .twins_imgs img{
-    width: 20vw;
-    height: 27vw;
+    width: calc(var(--vw) * 20);
+    height: calc(var(--vw) * 27);
     border: #fff 1px solid;
-    border-radius: 5vw;
+    border-radius: calc(var(--vw) * 5);
 }
 
 .twins_imgs .img1{
-    margin: 10vw 0 0 5vw;
+    margin: calc(var(--vw) * 10) 0 0 calc(var(--vw) * 5);
     transform: rotate(-10deg);
 }
 
 .twins_imgs .img2{
     position: absolute;
-    margin: 5vw 0 0 -10vw;
+    margin: calc(var(--vw) * 5) 0 0 calc(var(--vw) * -10);
     transform: rotate(15deg);
 }
 /* #endregion Twins_img */
@@ -338,88 +365,88 @@
 /* #region Bloco */
 
 .div_bloco{
-    padding: 2vw;
-    margin: 4vw 2vw 3vw 2vw;
+    padding: calc(var(--vw) * 2);
+    margin: calc(var(--vw) * 4) calc(var(--vw) * 2) calc(var(--vw) * 3) calc(var(--vw) * 2);
     border-radius: 30px;
     text-align: center;
 }
 
 .div_bloco h1{
-    margin: -0.5vw 0 0 0;
-    font-size: 2.5vw;
+    margin: calc(var(--vw) * -0.5) 0 0 0;
+    font-size: calc(var(--vw) * 2.5);
 }
 
 .div_bloco .img_1{
     width: 25%;
-    height: 35vw;
-    margin: 2vw 1vw 2vw 1vw;
+    height: calc(var(--vw) * 35);
+    margin: calc(var(--vw) * 2) calc(var(--vw) * 1) calc(var(--vw) * 2) calc(var(--vw) * 1);
     border-radius: 80px;
 }
 
 .div_bloco .img_2{
     width: 25%;
-    height: 25vw;
-    margin: 2vw 1vw 2vw 1vw;
+    height: calc(var(--vw) * 25);
+    margin: calc(var(--vw) * 2) calc(var(--vw) * 1) calc(var(--vw) * 2) calc(var(--vw) * 1);
     border-radius: 80px;
 }
 
 .div_bloco .texto{
     width: 50%;
-    margin: 1vw 3vw 1vw 3vw;
+    margin: calc(var(--vw) * 1) calc(var(--vw) * 3) calc(var(--vw) * 1) calc(var(--vw) * 3);
     text-align: left;
-    font-size: 2vw;
+    font-size: calc(var(--vw) * 2);
 }
 
 .div_bloco .texto p, .div_bloco .texto2 p{
-    margin: 1.1vw 0;
+    margin: calc(var(--vw) * 1.1) 0;
 }
 
 .div_bloco .texto2{
     width: 80%;
-    margin: 1vw 3vw 1vw 3vw;
+    margin: calc(var(--vw) * 1) calc(var(--vw) * 3) calc(var(--vw) * 1) calc(var(--vw) * 3);
     text-align: left;
-    font-size: 2vw;
+    font-size: calc(var(--vw) * 2);
 }
 
 #comp.div_bloco .img_2{
     width: 25%;
-    height: 25vw;
-    margin: 2vw 1vw 2vw 1vw;
-    border-radius: 6vw;
+    height: calc(var(--vw) * 25);
+    margin: calc(var(--vw) * 2) calc(var(--vw) * 1) calc(var(--vw) * 2) calc(var(--vw) * 1);
+    border-radius: calc(var(--vw) * 6);
 }
 
 #comp.div_bloco .texto h3, #comp.div_bloco .texto ul{
-    font-size: 1.5vw;
+    font-size: calc(var(--vw) * 1.5);
 }
 
 #comp.div_bloco .texto2 h3, #comp.div_bloco .texto2 ul{
-    font-size: 2vw;
+    font-size: calc(var(--vw) * 2);
 }
 
 #comp.div_bloco .texto h3{
-    margin: 2vw 1vw 0 1vw;
+    margin: calc(var(--vw) * 2) calc(var(--vw) * 1) 0 calc(var(--vw) * 1);
 }
 
 #comp.div_bloco .texto ul{
-    margin: 0 6vw 0 1vw;
+    margin: 0 calc(var(--vw) * 6) 0 calc(var(--vw) * 1);
 }
 
 #voluntario.texto2 h4,
 #voluntario.texto2 p{
      
-    font-size: 1.5vw;
+    font-size: calc(var(--vw) * 1.5);
 }
 
 #voluntario.texto2 h4{
-    margin: 1vw 0 0 0; 
+    margin: calc(var(--vw) * 1) 0 0 0; 
 }
 
 #voluntario.texto2 p{
-    margin: 0 0 1vw 0; 
+    margin: 0 0 calc(var(--vw) * 1) 0; 
 }
 
 #comp.div_bloco .texto2 h3, #comp.div_bloco .texto2 ul{
-    margin: 1vw 0 1vw 0;
+    margin: calc(var(--vw) * 1) 0 calc(var(--vw) * 1) 0;
 }
 
 #comp.div_bloco .texto ul, #comp.div_bloco .texto ul{
@@ -427,22 +454,22 @@
 }
 
 #comp.twins_imgs{
-    margin-bottom: 2vw;
+    margin-bottom: calc(var(--vw) * 2);
 }
 
 #comp.twins_imgs .img1{
-    margin: 3vw 0 0 -7vw;
+    margin: calc(var(--vw) * 3) 0 0 calc(var(--vw) * -7);
 }
 
 #comp.twins_imgs .img2{
-    margin: -1vw 0 0 -10vw;
+    margin: calc(var(--vw) * -1) 0 0 calc(var(--vw) * -10);
 }
 /* #endregion Bloco */
 
 /* #region Inicio Ações e Voluntario */
 .inicio{
     width: 100%;
-    margin-bottom: 8vw;
+    margin-bottom: calc(var(--vw) * 8);
 }
 
 .inicio .texto{
@@ -451,27 +478,27 @@
 }
 
 .inicio .texto h1{
-    margin: 4vw 0 2vw 0; 
-    font-size: 4.3vw;
+    margin: calc(var(--vw) * 4) 0 calc(var(--vw) * 2) 0; 
+    font-size: calc(var(--vw) * 4.3);
 }
 
 .inicio .texto p{
-    margin: 0 1vw 2vw 0;
-    font-size: 2vw;
+    margin: 0 calc(var(--vw) * 1) calc(var(--vw) * 2) 0;
+    font-size: calc(var(--vw) * 2);
 }
 
 .inicio .texto a{
-    width: 25vw;
-    padding: 0.3vw 1vw;
+    width: calc(var(--vw) * 25);
+    padding: calc(var(--vw) * 0.3) calc(var(--vw) * 1);
     text-align: center;
-    font-size: 1.5vw;
+    font-size: calc(var(--vw) * 1.5);
     border-radius: 30px;
 }
 
 .inicio img{
     width: 30%;
-    height: 40vw;
-    margin: 4vw 0 0 -10vw;
+    height: calc(var(--vw) * 40);
+    margin: calc(var(--vw) * 4) 0 0 calc(var(--vw) * -10);
     border-radius: 30px;
     transform: rotate(-15deg);
 }
@@ -483,36 +510,36 @@
 }
 
 .t_fotos{
-    margin: 2vw 10vw;
+    margin: calc(var(--vw) * 2) calc(var(--vw) * 10);
 }
 
 .t_fotos h1{
-    margin: 1vw 0;
-    font-size: 4.2vw;
+    margin: calc(var(--vw) * 1) 0;
+    font-size: calc(var(--vw) * 4.2);
 }
 
 .t_fotos p{
-    margin: 1vw 0;
-    font-size: 2vw;
+    margin: calc(var(--vw) * 1) 0;
+    font-size: calc(var(--vw) * 2);
 }
 
 .fotos{
     width: 95%;
-    padding: 1vw;
-    border-radius: 2vw;
+    padding: calc(var(--vw) * 1);
+    border-radius: calc(var(--vw) * 2);
 }
 
 .fotos img{
-    width: 20vw;
-    height: 20vw;
-    margin: 1.5vw;
+    width: calc(var(--vw) * 20);
+    height: calc(var(--vw) * 20);
+    margin: calc(var(--vw) * 1.5);
 }
 
 .f_bloco{
     width: 80%;
-    margin: 5vw 0;
-    padding: 2vw 5vw;
-    border-radius: 5vw;
+    margin: calc(var(--vw) * 5) 0;
+    padding: calc(var(--vw) * 2) calc(var(--vw) * 5);
+    border-radius: calc(var(--vw) * 5);
 }
 
 .f_bloco .texto{
@@ -520,14 +547,14 @@
 }
 
 .f_bloco .texto h1{
-    margin: 1vw;
-    font-size: 3vw;
+    margin: calc(var(--vw) * 1);
+    font-size: calc(var(--vw) * 3);
 }
 
 .f_bloco .texto p{
-    margin: 1vw;
+    margin: calc(var(--vw) * 1);
     width: 90%;
-    font-size: 1.8vw;
+    font-size: calc(var(--vw) * 1.8);
 }
 
 .f_bloco .btn_horarios{
@@ -537,21 +564,21 @@
 
 .f_bloco .btn_horarios a{
     width: 50%;
-    margin: 3vw 1vw 1vw 1vw;
-    padding: 1vw 2vw;
+    margin: calc(var(--vw) * 3) calc(var(--vw) * 1) calc(var(--vw) * 1) calc(var(--vw) * 1);
+    padding: calc(var(--vw) * 1) calc(var(--vw) * 2);
     text-align: center;
-    font-size: 1.5vw;
-    border-radius: 5vw;
+    font-size: calc(var(--vw) * 1.5);
+    border-radius: calc(var(--vw) * 5);
 }
 
 .f_bloco .btn_horarios .dias{
-    margin: 1vw 2vw 0 0;
-    font-size: 1.5vw;
+    margin: calc(var(--vw) * 1) calc(var(--vw) * 2) 0 0;
+    font-size: calc(var(--vw) * 1.5);
 }
 
 .f_bloco .btn_horarios p{
     margin: 0 0 0 0;
-    font-size: 1.5vw;
+    font-size: calc(var(--vw) * 1.5);
 }
 
 /* #endregion Fotos */
@@ -565,18 +592,21 @@ header{
 }
 
 header img{
-    width: 8vw;
-    height: 5vw;
-    margin-left: 3vw;
-    margin-top: 0.5vw;
+    width: calc(var(--vw) * 8);
+    height: calc(var(--vw) * 5);
+    margin-left: calc(max(0px, (100% - var(--site-max)) / 2) + calc(var(--vw) * 3));
+    margin-top: calc(var(--vw) * 0.5);
 }
 
 header .navbar{
     background-color: #fc949a;
     width: 100%;
-    height: 5vw;
+    height: calc(var(--vw) * 5);
     justify-content: space-evenly;
     align-items: center;
+    box-sizing: border-box;
+    padding-left: max(0px, calc((100% - var(--site-max)) / 2));
+    padding-right: max(0px, calc((100% - var(--site-max)) / 2));
 }
 
 header .navbar h2.link{
@@ -584,7 +614,7 @@ header .navbar h2.link{
 }
 
 header .navbar h2.link a{
-    font-size: 1.8vw;
+    font-size: calc(var(--vw) * 1.8);
     text-decoration: none;
     color: inherit;
 }
@@ -595,14 +625,14 @@ header .navbar h2.link a{
 
 footer{
     width: 100%;
-    height: 7vw;
+    height: calc(var(--vw) * 7);
     justify-content: space-evenly;
     align-items: center;
 }
 
 footer .contato{
-    margin-top: -1vw;
-    margin-left: -5vw;
+    margin-top: calc(var(--vw) * -1);
+    margin-left: calc(var(--vw) * -5);
 }
 
 footer .contato .tipos{
@@ -610,44 +640,44 @@ footer .contato .tipos{
 }
 
 footer .contato .tipos .telefone{
-    padding-right: 1vw;
+    padding-right: calc(var(--vw) * 1);
 }
 
 footer .contato .tipos .email{
-    padding-right: 1vw;
+    padding-right: calc(var(--vw) * 1);
 }
 
 footer .contato .tipos .endereco{
-    padding-right: 1vw;
+    padding-right: calc(var(--vw) * 1);
 }
 
 footer .horario{
-    margin-top: -1vw;
-    width: 15vw;
+    margin-top: calc(var(--vw) * -1);
+    width: calc(var(--vw) * 15);
 }
 
 footer .horario h3{
-    width: 8vw;
+    width: calc(var(--vw) * 8);
 }
 
 footer .horario .d_uteis{
-    padding-right: 2.5vw;
+    padding-right: calc(var(--vw) * 2.5);
 }
 
 footer .rsociais{
-    padding-top: 2.5vw;
+    padding-top: calc(var(--vw) * 2.5);
 }
 
 footer .rsociais .face{
-    padding: 0.5vw 0 0.3vw;
-    width: 1.5vw;
-    height: 1.5vw;
+    padding: calc(var(--vw) * 0.5) 0 calc(var(--vw) * 0.3);
+    width: calc(var(--vw) * 1.5);
+    height: calc(var(--vw) * 1.5);
 }
 
 footer .rsociais .insta{
-    padding: 0.5vw 0 0 1vw;
-    width: 1.7vw;
-    height: 1.7vw;
+    padding: calc(var(--vw) * 0.5) 0 0 calc(var(--vw) * 1);
+    width: calc(var(--vw) * 1.7);
+    height: calc(var(--vw) * 1.7);
 }
 
 footer h2, footer h3{
@@ -655,12 +685,12 @@ footer h2, footer h3{
 }
 
 footer h2{
-    height: 0.1vw;
-    font-size: 1.3vw;
+    height: calc(var(--vw) * 0.1);
+    font-size: calc(var(--vw) * 1.3);
 }
 footer h3{
-    height: 0.3vw;
-    font-size: 0.8vw;
+    height: calc(var(--vw) * 0.3);
+    font-size: calc(var(--vw) * 0.8);
 }
 
 /* #endregion Footer */
@@ -669,38 +699,38 @@ footer h3{
 /* Parte 1 */
 
 .conteiner_public .div_texto{
-    padding: 0 0 10vw 10vw;
+    padding: 0 0 calc(var(--vw) * 10) calc(var(--vw) * 10);
 }
 
 .conteiner_public .div_texto h1{
     margin: 0;
-    padding: 5vw 0 0 0;
-    height: 6.2vw;
-    font-size: 8vw;
+    padding: calc(var(--vw) * 5) 0 0 0;
+    height: calc(var(--vw) * 6.2);
+    font-size: calc(var(--vw) * 8);
 }
 
 .conteiner_public .div_texto .t1{
-    padding: 0 0 0 8vw;
+    padding: 0 0 0 calc(var(--vw) * 8);
 }
 
 .conteiner_public .div_texto h2{
     margin: 0;
-    padding: 1vw 0 0 0;
+    padding: calc(var(--vw) * 1) 0 0 0;
 }
 
 .conteiner_public .div_texto .t2{
-    font-size: 2.05vw;
-    padding: 5vw 0 0 0;
+    font-size: calc(var(--vw) * 2.05);
+    padding: calc(var(--vw) * 5) 0 0 0;
 }
 
 .conteiner_public .div_texto .t3{
-    font-size: 1.3vw;
+    font-size: calc(var(--vw) * 1.3);
 }
 
 /* Parte 1 */
 /* Parte 2 */
 .conteiner_public .mural{
-    margin: 5vw 0 5vw 0;
+    margin: calc(var(--vw) * 5) 0 calc(var(--vw) * 5) 0;
     padding: 0;
     align-items: center;
     border: 1px solid #0095da;
@@ -708,24 +738,24 @@ footer h3{
 }
 
 .conteiner_public .mural h1{
-    height: 2vw;
-    margin: -0.3vw 0 2vw 0;
-    font-size: 4vw;
+    height: calc(var(--vw) * 2);
+    margin: calc(var(--vw) * -0.3) 0 calc(var(--vw) * 2) 0;
+    font-size: calc(var(--vw) * 4);
 }
 
 .conteiner_public .mural h2{
     width: 70%;
-    margin: 1vw 0 0 0;
+    margin: calc(var(--vw) * 1) 0 0 0;
     padding: 0;
     text-align: center;
-    font-size: 2.7vw;
+    font-size: calc(var(--vw) * 2.7);
 }
 
 .conteiner_public .mural img{
-    margin: 2vw 1.5vw 3vw 1.5vw;
+    margin: calc(var(--vw) * 2) calc(var(--vw) * 1.5) calc(var(--vw) * 3) calc(var(--vw) * 1.5);
     padding: 0;
-    width: 20vw;
-    height: 30vw;
+    width: calc(var(--vw) * 20);
+    height: calc(var(--vw) * 30);
     border: 2px solid #ffffff;
     border-radius: 30px;
 }
@@ -733,18 +763,18 @@ footer h3{
 /* Parte 2 */
 /* Parte 3 */
 .conteiner_public .p3{
-    margin: 2vw 0 0 0;
-    padding-bottom: 3vw;
+    margin: calc(var(--vw) * 2) 0 0 0;
+    padding-bottom: calc(var(--vw) * 3);
     width: 100%;
-    height: 24vw;
+    height: calc(var(--vw) * 24);
     justify-content: space-evenly;
 }
 
 .conteiner_public .p3 .info{
     width: 45%;
-    height: 20vw;
-    margin: 1vw;
-    padding: 2vw 2vw 1vw 6vw;
+    height: calc(var(--vw) * 20);
+    margin: calc(var(--vw) * 1);
+    padding: calc(var(--vw) * 2) calc(var(--vw) * 2) calc(var(--vw) * 1) calc(var(--vw) * 6);
     border-radius: 40px;
     background-color: #e8e8e8;
     text-align: left;
@@ -753,23 +783,23 @@ footer h3{
 
 .conteiner_public .p3 .info h1{
     margin: 0;
-    font-size: 3vw;
+    font-size: calc(var(--vw) * 3);
 }
 
 .conteiner_public .p3 .info h3{
-    font-size: 1.5vw;
+    font-size: calc(var(--vw) * 1.5);
 }
 
 .conteiner_public .p3 .info ul{
-    font-size: 1.5vw;
+    font-size: calc(var(--vw) * 1.5);
 }
 
 .conteiner_public .p3 .info a{
     width: 30%;
-    padding: 0.5vw;
-    margin: 1vw 0 1vw 0;
+    padding: calc(var(--vw) * 0.5);
+    margin: calc(var(--vw) * 1) 0 calc(var(--vw) * 1) 0;
     border-radius: 30px;
-    font-size: 1.5vw;
+    font-size: calc(var(--vw) * 1.5);
     text-align: center;
     text-decoration: none;
     align-self: flex-start;
@@ -780,40 +810,18 @@ footer h3{
 
 /* #region Quem somos */
 /* #region DIV 1 */
-.conteiner_public #qsomos.div_texto {
-    width: 50%;
-    padding: 0 7vw 3vw 9vw;
-}
-
-.conteiner_public #qsomos.div_texto .t1qs{
-    font-size: 4vw;
-    margin: 0;
-}
-
-.conteiner_public #qsomos.div_texto .t2qs{
-    font-size: 1.5vw;
-    padding: 1.5vw 0 0 0;
-    margin: 0;
-}
-
-.qs1{
-    margin: 0;
-    padding: 0;
-    width: 30%;
-    height: 40vw;
-}
-
+/* topo de Quem Somos agora usa a classe .hero (mesmo estilo da .doacoes) */
 /* #endregion DIV 1 */
 
 /* #region DIV 2 */
 .p2_blocos{
     justify-content: space-evenly;
-    padding: 2vw 0;
+    padding: calc(var(--vw) * 2) 0;
 }
 
 .p2_blocos .bloco{
     width: 25%;
-    padding: 1vw 2vw 2vw 2vw;
+    padding: calc(var(--vw) * 1) calc(var(--vw) * 2) calc(var(--vw) * 2) calc(var(--vw) * 2);
     border-radius: 80px;
     text-align: left;
 }
@@ -827,7 +835,7 @@ footer h3{
 .p3_qs{
     display: flex;
     flex-direction: column;
-    padding: 5vw 0 1vw 0;
+    padding: calc(var(--vw) * 5) 0 calc(var(--vw) * 1) 0;
 }
 
 .p3_qs h1{
@@ -836,34 +844,34 @@ footer h3{
 }
 
 .p3_qs .coluna{
-    padding: 2vw 3vw;
+    padding: calc(var(--vw) * 2) calc(var(--vw) * 3);
     align-items: justify;
     justify-content: space-evenly;
 }
 
 .p3_qs .coluna .texto1{
-    padding: 1vw 2vw;
+    padding: calc(var(--vw) * 1) calc(var(--vw) * 2);
     width: 50%;
     height: 40%;
-    font-size: 1.5vw;
+    font-size: calc(var(--vw) * 1.5);
 }
 
 .p3_qs .coluna .texto2{
-    padding: 1vw 2vw;
+    padding: calc(var(--vw) * 1) calc(var(--vw) * 2);
     width: 50%;
     height: 40%;
-    font-size: 1.5vw;
+    font-size: calc(var(--vw) * 1.5);
 }
 
 .p3_qs .coluna .texto1 img{
     width: 100%;
-    height: 30vw;
+    height: calc(var(--vw) * 30);
     border-radius:  60px;
 }
 
 .p3_qs .coluna .texto2 img{
     width: 100%;
-    height: 20vw;
+    height: calc(var(--vw) * 20);
     border-radius:  60px;
 }
 /* #endregion DIV 3 */
@@ -871,30 +879,30 @@ footer h3{
 /* #region DIV 4 */
 .p4{
     background-color: #0095da;
-    margin: 5vw 2vw 3vw 2vw;
-    padding: 1.5vw;
+    margin: calc(var(--vw) * 5) calc(var(--vw) * 2) calc(var(--vw) * 3) calc(var(--vw) * 2);
+    padding: calc(var(--vw) * 1.5);
     align-items: center;
     border-radius: 100px;
 }
 
 .p4 h1{
-    margin: -1.8vw;
+    margin: calc(var(--vw) * -1.8);
 }
 
 .p4 .listas{
     justify-content: space-evenly;
-    margin: 1vw 2vw 0 2vw;
+    margin: calc(var(--vw) * 1) calc(var(--vw) * 2) 0 calc(var(--vw) * 2);
 }
 /* #endregion DIV 4 */
 
 /* #region DIV 5 */
 .p5{
-    padding: 2vw 0;
+    padding: calc(var(--vw) * 2) 0;
     text-align: center;
 }
 
 .p5 .tipos{
-    margin-top: 2vw;
+    margin-top: calc(var(--vw) * 2);
 }
 /* #endregion DIV 5 */
 
@@ -902,56 +910,33 @@ footer h3{
 
 /* #region Transparencia*/
 /* #region T1 */
-.transparencia1{
-    padding: 1vw 3vw;
-    margin-bottom: 4vw;
-}
-
-.transparencia1 h1{
-    width: 50%;
-    margin: 3vw 0 2vw 1vw;
-    font-size: 5vw;
-}
-
-.transparencia1 img{
-    width: 50%;
-    margin: 1vw 3vw 1vw 0;
-    border-radius: 75px;
-}
-
-.transparencia1 h2{
-    margin: 1vw 1vw 1vw 0;
-}
-
-.transparencia1 p{
-    font-size: 1.8vw;
-}
+/* topo da Transparência agora usa a classe .hero (mesmo estilo da .doacoes) */
 /* #endregion T1 */
 /* #region T2 */
 .t_m{
-    padding: 7vw 0 7vw 0;
+    padding: calc(var(--vw) * 7) 0 calc(var(--vw) * 7) 0;
 }
 
 .transparencia2{
-    padding: 0 5vw 3vw 5vw;
+    padding: 0 calc(var(--vw) * 5) calc(var(--vw) * 3) calc(var(--vw) * 5);
     border-radius: 60px;
     text-align: center;
 }
 
 .transparencia2 h1{
-    margin: 2vw 0 0 0;
-    font-size: 4vw;
+    margin: calc(var(--vw) * 2) 0 0 0;
+    font-size: calc(var(--vw) * 4);
 }
 
 .transparencia2 h2{
-    margin: -1vw 0 0 11vw;
-    font-size: 4vw;
+    margin: calc(var(--vw) * -1) 0 0 calc(var(--vw) * 11);
+    font-size: calc(var(--vw) * 4);
 }
 
 .transparencia2 .topo p{
-    margin: 2vw 0 0 0;
+    margin: calc(var(--vw) * 2) 0 0 0;
     text-align: left;
-    font-size: 2vw;
+    font-size: calc(var(--vw) * 2);
 }
 
 .transparencia2 .topo .inputs{
@@ -959,15 +944,15 @@ footer h3{
 }
 
 .transparencia2 .topo .inputs .inpt1{
-    width: 25vw;
-    height: 2vw;
+    width: calc(var(--vw) * 25);
+    height: calc(var(--vw) * 2);
     border: #fff;
     border-radius: 20px;
 }
 
 .transparencia2 .topo .inputs .inpt2{
-    width: 15vw;
-    height: 2vw;
+    width: calc(var(--vw) * 15);
+    height: calc(var(--vw) * 2);
     border: #fff;
     border-radius: 20px;
 }
@@ -975,9 +960,9 @@ footer h3{
 .transparencia2 .arquivos{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    height: 40vw;
-    margin-top: 2vw;
-    gap: 3vw 2vw;
+    height: calc(var(--vw) * 40);
+    margin-top: calc(var(--vw) * 2);
+    gap: calc(var(--vw) * 3) calc(var(--vw) * 2);
 }
 
 .transparencia2 .arquivos .doc{
@@ -988,75 +973,94 @@ footer h3{
 
 .transparencia2 .arquivos .doc img{
     width: 100%;
-    height: 15vw;
+    height: calc(var(--vw) * 15);
 }
 
 .transparencia2 .arquivos .doc p{
     width: 95%;
-    font-size: clamp(0.4em, 1.3vw, 3em);
+    font-size: clamp(0.4em, calc(var(--vw) * 1.3), 3em);
 }
 
 /* #endregion T2 */
 /* #endregion Transparencia*/
 
 /* #region Doações a verificar*/
-.doacoes{
-    padding-top: 3vw;
+/* Topo das páginas: Doações, Transparência e Quem Somos (mesma estrutura) */
+.doacoes,
+.hero{
+    padding-top: calc(var(--vw) * 3);
 }
 
-.doacoes .texto{
+.doacoes .texto,
+.hero .texto{
     width: 65%;
     height: 100%;
-    padding: 0 3vw 0 4vw;
+    padding: 0 calc(var(--vw) * 3) 0 calc(var(--vw) * 4);
 }
 
-.doacoes .texto h1{
-    margin: 0 0 -1vw 0;
-    font-size: 4.7vw;
+.doacoes .texto h1,
+.hero .texto h1{
+    margin: 0 0 calc(var(--vw) * -1) 0;
+    font-size: calc(var(--vw) * 4.2);
 }
 
-.doacoes .texto h2{
+.hero .texto h1{
+    margin-bottom: calc(var(--vw) * 1);
+}
+
+.doacoes .texto h2,
+.hero .texto h2{
     width: 90%; 
-    font-size: 2.5vw;  
+    font-size: calc(var(--vw) * 2.5);  
 }
 
-.doacoes .texto p{
+.doacoes .texto p,
+.hero .texto p{
     width: 90%; 
-    font-size: 2vw;
+    font-size: calc(var(--vw) * 2);
 }
 
-.doacoes .texto a{
-    padding: 0.5vw 1.5vw 0.5vw 1.5vw;
-    font-size: 1.5vw;
+.doacoes .texto a,
+.hero .texto a{
+    padding: calc(var(--vw) * 0.5) calc(var(--vw) * 1.5) calc(var(--vw) * 0.5) calc(var(--vw) * 1.5);
+    font-size: calc(var(--vw) * 1.5);
     border-radius: 30px;
 }
 
-.doacoes img {
+.hero.f_branco{
+    /* mantém a faixa branca de ponta a ponta mesmo com o conteúdo centralizado */
+    box-shadow: 0 0 0 100vmax #fff;
+    clip-path: inset(0 -100vmax);
+}
+
+.doacoes img,
+.hero img {
     width: 35%;
-    height: 45vw;
+    height: calc(var(--vw) * 45);
+    object-fit: cover;
     border-radius: 50px;
-    margin: 0 3vw 3vw 3vw;
+    margin: 0 calc(var(--vw) * 3) calc(var(--vw) * 3) calc(var(--vw) * 3);
 }
 
 #doacoes.div_bloco{
-    padding: 1vw 1vw 0 0;
-    margin: 4vw 2vw 3vw 2vw;
+    padding: calc(var(--vw) * 1) calc(var(--vw) * 1) 0 0;
+    margin: calc(var(--vw) * 4) calc(var(--vw) * 2) calc(var(--vw) * 3) calc(var(--vw) * 2);
     border-radius: 30px;
     text-align: center;
 }
 
 #doacoes.div_bloco .img_1{
     width: 25%;
-    height: 35vw;
-    margin: 1vw;
-    border-radius: 6vw;
+    height: calc(var(--vw) * 35);
+    margin: calc(var(--vw) * 1);
+    border-radius: calc(var(--vw) * 6);
 }
 
 #doacoes.div_bloco .img_2{
     width: 25%;
-    height: 25vw;
-    margin: 1vw;
-    border-radius: 6vw;
+    height: calc(var(--vw) * 25);
+    margin: calc(var(--vw) * 1);
+    border-radius: calc(var(--vw) * 6);
 }
 
 /* #endregion Doações */
@@ -1069,44 +1073,44 @@ footer h3{
 }
 
 .atividades .texto{
-    padding: 0 0 2vw 10vw;
+    padding: 0 0 calc(var(--vw) * 2) calc(var(--vw) * 10);
 }
 
 .atividades h1{
-    margin: 0 1vw 1vw 1vw;
-    font-size: 6vw;
+    margin: 0 calc(var(--vw) * 1) calc(var(--vw) * 1) calc(var(--vw) * 1);
+    font-size: calc(var(--vw) * 6);
 }
 
 .atividades h2{
-    margin: 1vw;
-    font-size: 2vw;
+    margin: calc(var(--vw) * 1);
+    font-size: calc(var(--vw) * 2);
 }
 
 .atividades p{
-    margin: 2vw 1vw 0 1vw;
-    font-size: 1.5vw;
+    margin: calc(var(--vw) * 2) calc(var(--vw) * 1) 0 calc(var(--vw) * 1);
+    font-size: calc(var(--vw) * 1.5);
 }
 
 .atividades ul{
-    margin: 0 1vw 1vw 1vw;
-    font-size: 1.5vw;
+    margin: 0 calc(var(--vw) * 1) calc(var(--vw) * 1) calc(var(--vw) * 1);
+    font-size: calc(var(--vw) * 1.5);
 }
 
 .atividades .img img{
     position: absolute;
-    width: 18vw;
-    height: 25vw;
-    margin: 0 0 0 10vw;
+    width: calc(var(--vw) * 18);
+    height: calc(var(--vw) * 25);
+    margin: 0 0 0 calc(var(--vw) * 10);
     border: #fff 1px solid;
 }
 
 .atividades .img .img1{
-    margin: 3vw 1vw 1vw 5vw;
+    margin: calc(var(--vw) * 3) calc(var(--vw) * 1) calc(var(--vw) * 1) calc(var(--vw) * 5);
     transform: rotate(-15deg);
 }
 
 .atividades .img .img2{
-    margin: 8vw 1vw 1vw 20vw;
+    margin: calc(var(--vw) * 8) calc(var(--vw) * 1) calc(var(--vw) * 1) calc(var(--vw) * 20);
     transform: rotate(15deg);
 }
 /* #endregion div1*/
@@ -1114,50 +1118,50 @@ footer h3{
 /* #region div2*/
 .atividades2{
     width: 75%;
-    height: 25vw;
-    margin: 4vw 3vw;
-    padding: 1vw 10vw 1vw 10vw;
+    height: calc(var(--vw) * 25);
+    margin: calc(var(--vw) * 4) calc(var(--vw) * 3);
+    padding: calc(var(--vw) * 1) calc(var(--vw) * 10) calc(var(--vw) * 1) calc(var(--vw) * 10);
     border-radius: 30px;
     text-align: left;
 }
 
 .atividades2 h1{
-    font-size: 4vw;
+    font-size: calc(var(--vw) * 4);
 }
 
 .atividades2 p{
-    margin: 1vw 1vw 2vw 0;
-    font-size: 2vw;
+    margin: calc(var(--vw) * 1) calc(var(--vw) * 1) calc(var(--vw) * 2) 0;
+    font-size: calc(var(--vw) * 2);
 }
 
 .atividades2 .txt{
-    margin: 1vw 1vw 2vw 0;
+    margin: calc(var(--vw) * 1) calc(var(--vw) * 1) calc(var(--vw) * 2) 0;
 }
 
 .atividades2 a{
-    padding: 0.5vw 1.5vw 0.5vw 1.5vw;
+    padding: calc(var(--vw) * 0.5) calc(var(--vw) * 1.5) calc(var(--vw) * 0.5) calc(var(--vw) * 1.5);
     border-radius: 20px;
-    font-size: 2vw;
+    font-size: calc(var(--vw) * 2);
 }
 
 /* #endregion div2*/
 
 /* #region div3*/
 .atividades3{
-    margin: 1vw 2vw;
-    padding: 7vw 5vw 7vw 3vw;
+    margin: calc(var(--vw) * 1) calc(var(--vw) * 2);
+    padding: calc(var(--vw) * 7) calc(var(--vw) * 5) calc(var(--vw) * 7) calc(var(--vw) * 3);
     border-radius: 30px;
 }
 
 .painel{
     width: 70%;
-    margin-right: 2vw;
+    margin-right: calc(var(--vw) * 2);
 }
 
 .atividades3 img{
     width: 45%;
-    height: 20vw;
-    margin: 0 0 1vw 1vw;
+    height: calc(var(--vw) * 20);
+    margin: 0 0 calc(var(--vw) * 1) calc(var(--vw) * 1);
     outline: 3px solid white;
     outline-offset: -3px;
     border-radius: 50px;
@@ -1168,22 +1172,22 @@ footer h3{
 }
 
 .atividades3 .texto h1{
-    margin: 2vw 1vw 0 0;
-    font-size: 4vw;
+    margin: calc(var(--vw) * 2) calc(var(--vw) * 1) 0 0;
+    font-size: calc(var(--vw) * 4);
 }
 
 .atividades3 .texto h2{
-    margin: -1.3vw 1vw 1vw 9vw;
-    font-size: 4vw;
+    margin: calc(var(--vw) * -1.3) calc(var(--vw) * 1) calc(var(--vw) * 1) calc(var(--vw) * 9);
+    font-size: calc(var(--vw) * 4);
 }
 
 .atividades3 .texto p{
-    margin: 1vw;
-    font-size: 2vw;
+    margin: calc(var(--vw) * 1);
+    font-size: calc(var(--vw) * 2);
 }
 
 .atividades3 .texto ul{
-    font-size: 2vw;
+    font-size: calc(var(--vw) * 2);
 }
 
 /* #endregion div3*/
@@ -1191,19 +1195,19 @@ footer h3{
 
 /* #region Voluntario */
 #voluntario.inicio .texto h1{
-    margin: 7vw 0 1vw 0; 
-    font-size: 4.3vw;
+    margin: calc(var(--vw) * 7) 0 calc(var(--vw) * 1) 0; 
+    font-size: calc(var(--vw) * 4.3);
 }
 
 #voluntario.inicio .texto h2{
-    margin: 0 0 2vw 0; 
-    font-size: 3.3vw;
+    margin: 0 0 calc(var(--vw) * 2) 0; 
+    font-size: calc(var(--vw) * 3.3);
 }
 
 #voluntario.inicio img{
     width: 30%;
-    height: 40vw;
-    margin: 4vw 0 0 -10vw;
+    height: calc(var(--vw) * 40);
+    margin: calc(var(--vw) * 4) 0 0 calc(var(--vw) * -10);
     border-radius: 30px;
     transform: rotate(0deg);
 }
@@ -1217,23 +1221,23 @@ footer h3{
 
 .instalacoes1 .texto{
     width: 50%;
-    padding: 1vw 1vw 1vw 7vw;
+    padding: calc(var(--vw) * 1) calc(var(--vw) * 1) calc(var(--vw) * 1) calc(var(--vw) * 7);
 }
 
 .instalacoes1 .texto h1{
-    margin: 3vw 1vw 1vw 1vw;
-    font-size: 5vw;
+    margin: calc(var(--vw) * 3) calc(var(--vw) * 1) calc(var(--vw) * 1) calc(var(--vw) * 1);
+    font-size: calc(var(--vw) * 5);
 }
 
 .instalacoes1 .texto h2{
-    margin: -1vw 1vw 1vw 1vw;
-    font-size: 2.5vw;
+    margin: calc(var(--vw) * -1) calc(var(--vw) * 1) calc(var(--vw) * 1) calc(var(--vw) * 1);
+    font-size: calc(var(--vw) * 2.5);
 }
 
 .instalacoes1 .texto p{
     width: 70%;
-    margin: 0 1vw 1vw 1vw;
-    font-size: 2vw;
+    margin: 0 calc(var(--vw) * 1) calc(var(--vw) * 1) calc(var(--vw) * 1);
+    font-size: calc(var(--vw) * 2);
 }
 
 .instalacoes2{
@@ -1242,14 +1246,14 @@ footer h3{
 
 .instalacoes2 .titulo{
     text-align: center;
-    margin: 4vw 1vw 1vw 1vw;
-    font-size: 3vw;
+    margin: calc(var(--vw) * 4) calc(var(--vw) * 1) calc(var(--vw) * 1) calc(var(--vw) * 1);
+    font-size: calc(var(--vw) * 3);
 }
 
 .instalacoes2 .subtitulo{
     width: 80%;
-    margin: 0 10vw 0 10vw;
-    font-size: 2vw;
+    margin: 0 calc(var(--vw) * 10) 0 calc(var(--vw) * 10);
+    font-size: calc(var(--vw) * 2);
 }
 
 .instalacoes3{
@@ -1258,15 +1262,15 @@ footer h3{
 
 .instalacoes3 p{
     width: 40%;
-    margin: 8vw 30% 0 30%;
-    font-size: 2vw;
+    margin: calc(var(--vw) * 8) 30% 0 30%;
+    font-size: calc(var(--vw) * 2);
 }
 
 .instalacoes3 img{
     width: 45%;
-    height: 30vw;
-    margin: 3vw 2vw 4vw 2.5vw;
-    border-radius: 6vw;
+    height: calc(var(--vw) * 30);
+    margin: calc(var(--vw) * 3) calc(var(--vw) * 2) calc(var(--vw) * 4) calc(var(--vw) * 2.5);
+    border-radius: calc(var(--vw) * 6);
 }
 
 /* #endregion Instalações */
@@ -1283,13 +1287,13 @@ footer h3{
 }
 
 .contato1 .texto h1{
-    margin: 6vw 0 0 6vw;
-    font-size: 5vw;
+    margin: calc(var(--vw) * 6) 0 0 calc(var(--vw) * 6);
+    font-size: calc(var(--vw) * 5);
 }
 
 .contato1 .texto p{
-    margin: 1vw 0 0 6vw;
-    font-size: 2vw;
+    margin: calc(var(--vw) * 1) 0 0 calc(var(--vw) * 6);
+    font-size: calc(var(--vw) * 2);
 }
 
 .contato1 .imgs{
@@ -1297,18 +1301,18 @@ footer h3{
 }
 
 .contato1 .imgs img{
-    width: 20vw;
-    height: 27vw;
-    border-radius: 5vw;
+    width: calc(var(--vw) * 20);
+    height: calc(var(--vw) * 27);
+    border-radius: calc(var(--vw) * 5);
 }
 
 .contato1 .imgs .img1{
-    margin: 7vw 0 0 5vw;
+    margin: calc(var(--vw) * 7) 0 0 calc(var(--vw) * 5);
     transform: rotate(-15deg);
 }
 
 .contato1 .imgs .img2{
-    margin: -28vw 0 0 20vw;
+    margin: calc(var(--vw) * -28) 0 0 calc(var(--vw) * 20);
     transform: rotate(15deg);
 }
 /* #endregion Contato1 */
@@ -1319,8 +1323,8 @@ footer h3{
 }
 
 .contato2 .c_div{
-    margin: 6vw 2vw 6vw 2vw;
-    padding: 2vw;
+    margin: calc(var(--vw) * 6) calc(var(--vw) * 2) calc(var(--vw) * 6) calc(var(--vw) * 2);
+    padding: calc(var(--vw) * 2);
     border-radius: 50px;
 }
 
@@ -1329,40 +1333,40 @@ footer h3{
 }
 
 .contato2 .c_div .c_form h1{
-    margin: 1vw;
+    margin: calc(var(--vw) * 1);
     text-align: center;
-    font-size: 2.5vw;
+    font-size: calc(var(--vw) * 2.5);
 }
 
 .contato2 .c_div .c_form h2{
-    margin: 1vw 0 0.5vw 0.5vw;
-    font-size: 2vw;
+    margin: calc(var(--vw) * 1) 0 calc(var(--vw) * 0.5) calc(var(--vw) * 0.5);
+    font-size: calc(var(--vw) * 2);
 }
 
 .contato2 .c_div .c_form input, 
 .contato2 .c_div .c_form textarea{
     width: 90%;
-    height: 3vw;
-    padding-left: 1vw;
+    height: calc(var(--vw) * 3);
+    padding-left: calc(var(--vw) * 1);
     border: none;
-    border-radius: 2vw;
-    font-size: 1vw;
+    border-radius: calc(var(--vw) * 2);
+    font-size: calc(var(--vw) * 1);
 }
 
 .contato2 .c_div .c_form textarea{
-    height: 12vw;
-    padding: 1vw;
-    font-size: 1vw;
+    height: calc(var(--vw) * 12);
+    padding: calc(var(--vw) * 1);
+    font-size: calc(var(--vw) * 1);
     resize: none; 
 }
 
 .contato2 .c_div .c_form a{
-    width: 8vw;
-    margin: 2vw 0 0.5vw 0;
-    padding: 0 1.5vw;
+    width: calc(var(--vw) * 8);
+    margin: calc(var(--vw) * 2) 0 calc(var(--vw) * 0.5) 0;
+    padding: 0 calc(var(--vw) * 1.5);
     border-radius: 30px;
     text-align: center;
-    font-size: 2vw;
+    font-size: calc(var(--vw) * 2);
 }
 
 .contato2 .c_div .c_tipos{
@@ -1371,37 +1375,37 @@ footer h3{
 
 .contato2 .c_div .c_tipo{
     width: 50%;
-    height: 20vw;
+    height: calc(var(--vw) * 20);
     align-items: center;
     text-align: center;
     overflow-wrap: break-word;
 }
 
 .contato2 .c_div .c_tipo img{
-    width: 10vw;
-    height: 10vw;
-    margin: 2vw 0 0 0;
+    width: calc(var(--vw) * 10);
+    height: calc(var(--vw) * 10);
+    margin: calc(var(--vw) * 2) 0 0 0;
 }
 
 .contato2 .c_div .c_tipo h3{
-    margin: 0.5vw;
-    font-size: 2vw;
+    margin: calc(var(--vw) * 0.5);
+    font-size: calc(var(--vw) * 2);
 }
 
 .contato2 .c_div .c_tipo p{
     width: 100%;
-    margin: 0.5vw;
-    font-size: 1.5vw;
+    margin: calc(var(--vw) * 0.5);
+    font-size: calc(var(--vw) * 1.5);
 }
 
 .contato2 .c_div .c_tipos .mapa iframe{
     width: 100%;
-    height: 20vw;
+    height: calc(var(--vw) * 20);
 
-    margin: 1vw 0 0 0;
+    margin: calc(var(--vw) * 1) 0 0 0;
 
     border: 0;
-    border-radius: 1vw;
+    border-radius: calc(var(--vw) * 1);
 
     /* filter: grayscale(100%); */
 }
@@ -1417,14 +1421,14 @@ footer h3{
 }
 
 .conteiner_logar .div_bloco{
-    width: 30%;
-    padding: 3vw;
+    width: min(30%, calc(var(--vw) * 30));
+    padding: calc(var(--vw) * 3);
     border: #fff 1px solid;
 }
 
 .conteiner_logar .div_bloco h1{
-    margin: 3vw 4vw 3vw 4vw;
-    font-size: 5vw; 
+    margin: calc(var(--vw) * 3) calc(var(--vw) * 4) calc(var(--vw) * 3) calc(var(--vw) * 4);
+    font-size: calc(var(--vw) * 5); 
    -webkit-text-stroke: 1px #00000086;
 }
 
@@ -1435,21 +1439,21 @@ footer h3{
 
 .conteiner_logar .div_bloco input{
     width: 90%;
-    height: 3vw;
-    margin: 1vw;
-    padding-left: 1vw;
+    height: calc(var(--vw) * 3);
+    margin: calc(var(--vw) * 1);
+    padding-left: calc(var(--vw) * 1);
     border: #00000086 1px solid;
-    border-radius: 2vw;
-    font-size: 1.5vw;
+    border-radius: calc(var(--vw) * 2);
+    font-size: calc(var(--vw) * 1.5);
 }
 
 .conteiner_logar .div_bloco button{
-    width: 8vw;
-    margin: 2vw 0 0.5vw 0;
+    width: calc(var(--vw) * 8);
+    margin: calc(var(--vw) * 2) 0 calc(var(--vw) * 0.5) 0;
     border: #00000086 1px solid;
     border-radius: 30px;
     text-align: center;
-    font-size: 2vw;
+    font-size: calc(var(--vw) * 2);
 }
 
 .conteiner_logar .div_bloco button:hover{
@@ -1491,7 +1495,7 @@ footer h3{
 
     .p4 {
         border-radius: 40px !important;
-        margin: 4vw 2vw !important;
+        margin: calc(var(--vw) * 4) calc(var(--vw) * 2) !important;
     }
     .p4 .listas {
         flex-direction: column !important;
@@ -1507,7 +1511,7 @@ footer h3{
 
     .transparencia2 {
         border-radius: 30px !important;
-        padding: 4vw !important;
+        padding: calc(var(--vw) * 4) !important;
     }
     .transparencia2 h1,
     .transparencia2 h2 {
@@ -1541,7 +1545,7 @@ footer h3{
     .entrega .bloco2 {
         flex-direction: column !important;
         border-radius: 40px !important;
-        margin: 2vw !important;
+        margin: calc(var(--vw) * 2) !important;
         padding: 20px !important;
     }
     .entrega .bloco2 h1 {
@@ -1586,7 +1590,7 @@ footer h3{
     .atividades2 {
         width: 90% !important;
         height: auto !important;
-        margin: 4vw auto !important;
+        margin: calc(var(--vw) * 4) auto !important;
         padding: 20px !important;
         border-radius: 20px !important;
         text-align: center !important;
@@ -1728,5 +1732,54 @@ footer h3{
     .atividades3 .texto p,
     .atividades3 .texto ul {
         font-size: 19px !important;
+    }
+}
+
+/* --- TOPO (.doacoes / .hero) e CARDS DE DOAÇÃO no mobile --- */
+@media screen and (max-width: 768px) {
+    .doacoes.row,
+    .hero.row {
+        flex-direction: column !important;
+    }
+    .doacoes .texto,
+    .hero .texto {
+        width: 100% !important;
+        padding: 0 20px !important;
+        box-sizing: border-box;
+    }
+    .doacoes .texto h1,
+    .hero .texto h1 {
+        margin: 0 0 10px 0 !important;
+        font-size: 28px !important;
+    }
+    .doacoes .texto h2,
+    .hero .texto h2 {
+        width: 100% !important;
+        font-size: 20px !important;
+    }
+    .doacoes .texto p,
+    .hero .texto p {
+        width: 100% !important;
+        font-size: 16px !important;
+    }
+    .doacoes img,
+    .hero img {
+        width: calc(100% - 40px) !important;
+        height: auto !important;
+        max-height: 350px;
+        margin: 10px 20px 20px 20px !important;
+    }
+
+    .entrega .d_blocos {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 16px !important;
+        padding: 16px !important;
+    }
+    .entrega .d_blocos .bloco {
+        flex: none !important;
+        width: 100% !important;
+        padding: 20px !important;
+        border-radius: 25px !important;
     }
 }
